@@ -1,0 +1,2032 @@
+digraph cil_rad {
+rankdir = LR;
+node [shape=oval];
+  1114822007 -> -905772693[label =" called line = 10"];
+  1114822007 [ label = " updateOntologyTest()
+/backend/src/test/java/com/CSI5324/OntologyControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-905772693 [ label = " updateOntologyTest()
+/backend/src/test/java/com/CSI5324/OntologyControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -14965986 -> -14965986[label =" called line = 4"];
+  -14965986 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-14965986 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1726496229 -> 1726496229[label =" called line = 5"];
+  1726496229 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/NodeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1726496229 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/NodeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  211982769 -> 211982769[label =" called line = 4"];
+  211982769 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+211982769 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  857779511 -> -1856030810[label =" called line = 10"];
+  857779511 [ label = " updatePersonTest()
+/backend/src/test/java/com/CSI5324/PersonControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1856030810 [ label = " updatePersonTest()
+/backend/src/test/java/com/CSI5324/PersonControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1187289312 -> -1187289312[label =" called line = 5"];
+  -1187289312 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1187289312 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2024435633 -> 1937531139[label =" called line = 3"];
+  2024435633 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2024435633 -> 1937531139[label =" called line = 4"];
+  2024435633 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2024435633 -> -1876270642[label =" called line = 6"];
+  2024435633 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " createEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  54956378 -> 1669258125[label =" called line = 4"];
+  54956378 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  54956378 -> 841292879[label =" called line = 5"];
+  54956378 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  54956378 -> 1935152702[label =" called line = 6"];
+  54956378 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  54956378 -> -2112340593[label =" called line = 7"];
+  54956378 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " createEdge()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1614133014 -> -1614133014[label =" called line = 10"];
+  -1614133014 [ label = " dfs()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1614133014 [ label = " dfs()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -338783755 -> 1937531139[label =" called line = 3"];
+  -338783755 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -338783755 -> 1937531139[label =" called line = 4"];
+  -338783755 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -338783755 -> -1876270642[label =" called line = 5"];
+  -338783755 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -338783755 -> -338783755[label =" called line = 7"];
+  -338783755 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-338783755 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1752601307[label =" called line = 4"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1752601307 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1856030810[label =" called line = 5"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1856030810 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 370726197[label =" called line = 6"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+370726197 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -481006463[label =" called line = 7"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-481006463 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1848115617[label =" called line = 8"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1848115617 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1249648296[label =" called line = 11"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1249648296 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1309626333[label =" called line = 11"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1309626333 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -905772693[label =" called line = 12"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-905772693 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1928857289[label =" called line = 13"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1928857289 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 2083580000[label =" called line = 14"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2083580000 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1102139429[label =" called line = 15"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1102139429 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 18"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 19"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 21"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 22"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 22"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 24"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 25"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 27"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 27"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 29"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 30"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 31"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 32"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 32"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 34"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 34"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 36"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 37"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 39"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 39"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 41"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 42"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 43"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 44"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 44"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 46"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 46"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 48"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 49"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 51"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 51"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 53"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 54"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 55"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 56"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 56"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 58"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 58"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 60"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 61"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 63"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 63"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 65"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 66"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 67"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 68"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 68"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 70"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 70"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1765100200[label =" called line = 72"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 141986733[label =" called line = 73"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -305670245[label =" called line = 75"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1309448787[label =" called line = 75"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1309448787 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 77"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 78"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 79"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 80"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 80"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 82"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 82"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1935152702[label =" called line = 84"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1935152702 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 841292879[label =" called line = 85"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+841292879 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1669258125[label =" called line = 86"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 347737198[label =" called line = 87"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+347737198 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -2112340593[label =" called line = 87"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2112340593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> 1948041152[label =" called line = 89"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1433088593 -> -1876270642[label =" called line = 89"];
+  -1433088593 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1876270642 [ label = " populate()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1372556276 -> -2004330369[label =" called line = 3"];
+  -1372556276 [ label = " checkCycle()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2004330369 [ label = " checkCycle()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1372556276 -> -1614133014[label =" called line = 4"];
+  -1372556276 [ label = " checkCycle()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1614133014 [ label = " checkCycle()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1512564067 -> 1512564067[label =" called line = 5"];
+  1512564067 [ label = " updateEdge()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1512564067 [ label = " updateEdge()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1222525843 -> -905772693[label =" called line = 4"];
+  -1222525843 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-905772693 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1222525843 -> 1928857289[label =" called line = 5"];
+  -1222525843 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1928857289 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1222525843 -> -1309626333[label =" called line = 6"];
+  -1222525843 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1309626333 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1222525843 -> -1102139429[label =" called line = 7"];
+  -1222525843 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1102139429 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1222525843 -> 2083580000[label =" called line = 8"];
+  -1222525843 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2083580000 [ label = " createOntology()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2032994936 -> 2032994936[label =" called line = 5"];
+  2032994936 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/PersonControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2032994936 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/PersonControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -932062678 -> 1161021489[label =" called line = 19"];
+  -932062678 [ label = " createEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -932062678 -> 1948041152[label =" called line = 19"];
+  -932062678 [ label = " createEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1025529726 -> 211982769[label =" called line = 3"];
+  1025529726 [ label = " updateOntology()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+211982769 [ label = " updateOntology()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  322688094 -> -1765100200[label =" called line = 4"];
+  322688094 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1765100200 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  322688094 -> 141986733[label =" called line = 5"];
+  322688094 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  322688094 -> -1018526054[label =" called line = 6"];
+  322688094 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1018526054 [ label = " createNode()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -733391069 -> -733391069[label =" called line = 3"];
+  -733391069 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-733391069 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/OntologyService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1868507701 -> -1868507701[label =" called line = 4"];
+  -1868507701 [ label = " findAllEdge()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1868507701 [ label = " findAllEdge()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1410154621 -> 983122298[label =" called line = 4"];
+  1410154621 [ label = " check()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+983122298 [ label = " check()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1625374106 -> 1625374106[label =" called line = 4"];
+  1625374106 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1625374106 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1937531139 -> 1937531139[label =" called line = 4"];
+  1937531139 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " findById()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -929423079 -> -929423079[label =" called line = 4"];
+  -929423079 [ label = " login()
+/backend/src/main/java/com/CSI5324/controller/PersonController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-929423079 [ label = " login()
+/backend/src/main/java/com/CSI5324/controller/PersonController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1409434759 -> 1409434759[label =" called line = 5"];
+  1409434759 [ label = " updateOntology()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1409434759 [ label = " updateOntology()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1597321388 -> 1597321388[label =" called line = 4"];
+  1597321388 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1597321388 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  61274625 -> 1445347454[label =" called line = 38"];
+  61274625 [ label = " main()
+/backend/.mvn/wrapper/MavenWrapperDownloader.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1445347454 [ label = " main()
+/backend/.mvn/wrapper/MavenWrapperDownloader.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  253679031 -> 1669258125[label =" called line = 9"];
+  253679031 [ label = " updateEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1669258125 [ label = " updateEdgeTest()
+/backend/src/test/java/com/CSI5324/EdgeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -451593794 -> 1937531139[label =" called line = 3"];
+  -451593794 [ label = " updateEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1937531139 [ label = " updateEdge()
+/backend/src/main/java/com/CSI5324/services/EdgeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2116908525 -> 2116908525[label =" called line = 4"];
+  2116908525 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2116908525 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  244192351 -> 244192351[label =" called line = 4"];
+  244192351 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+244192351 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -807274702 -> -807274702[label =" called line = 5"];
+  -807274702 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/OntologyControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-807274702 [ label = " setUp()
+/backend/src/test/java/com/CSI5324/OntologyControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1344204482 -> 1249648296[label =" called line = 3"];
+  -1344204482 [ label = " updatePerson()
+/backend/src/main/java/com/CSI5324/services/PersonService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1249648296 [ label = " updatePerson()
+/backend/src/main/java/com/CSI5324/services/PersonService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1344204482 -> 1249648296[label =" called line = 4"];
+  -1344204482 [ label = " updatePerson()
+/backend/src/main/java/com/CSI5324/services/PersonService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1249648296 [ label = " updatePerson()
+/backend/src/main/java/com/CSI5324/services/PersonService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  983122298 -> 983122298[label =" called line = 4"];
+  983122298 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+983122298 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1953272712 -> -305670245[label =" called line = 6"];
+  1953272712 [ label = " createNewNode()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-305670245 [ label = " createNewNode()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  399114029 -> 399114029[label =" called line = 5"];
+  399114029 [ label = " updateNode()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+399114029 [ label = " updateNode()
+/backend/src/main/java/com/CSI5324/controller/NodeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -661949064 -> -661949064[label =" called line = 4"];
+  -661949064 [ label = " populate()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-661949064 [ label = " populate()
+/backend/src/main/java/com/CSI5324/controller/OntologyController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  212187472 -> 212187472[label =" called line = 3"];
+  212187472 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+212187472 [ label = " deleteById()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2078297624 -> -2078297624[label =" called line = 4"];
+  -2078297624 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-2078297624 [ label = " findById()
+/backend/src/main/java/com/CSI5324/controller/EdgeController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1161021489[label =" called line = 11"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 11"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 929872706[label =" called line = 11"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+929872706 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 11"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1161021489[label =" called line = 12"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 12"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1161021489[label =" called line = 17"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 17"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 929872706[label =" called line = 18"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+929872706 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 18"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1161021489[label =" called line = 19"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 19"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 929872706[label =" called line = 14"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+929872706 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 14"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1161021489[label =" called line = 15"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1161021489 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -2004330369 -> 1948041152[label =" called line = 15"];
+  -2004330369 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1948041152 [ label = " createAdgencyMatrix()
+/backend/src/main/java/com/CSI5324/services/DAGService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  568919319 -> 141986733[label =" called line = 10"];
+  568919319 [ label = " updateNodeTest()
+/backend/src/test/java/com/CSI5324/NodeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+141986733 [ label = " updateNodeTest()
+/backend/src/test/java/com/CSI5324/NodeControllerTests.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  185437939 -> -1752601307[label =" called line = 4"];
+  185437939 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1752601307 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  185437939 -> 1848115617[label =" called line = 5"];
+  185437939 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1848115617 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  185437939 -> -481006463[label =" called line = 6"];
+  185437939 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-481006463 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  185437939 -> -1856030810[label =" called line = 7"];
+  185437939 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1856030810 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  185437939 -> 370726197[label =" called line = 8"];
+  185437939 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+370726197 [ label = " createPerson()
+/backend/src/test/java/com/CSI5324/AbstractTest.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  367109150 -> -14965986[label =" called line = 3"];
+  367109150 [ label = " updateNode()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-14965986 [ label = " updateNode()
+/backend/src/main/java/com/CSI5324/services/NodeService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+}

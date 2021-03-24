@@ -11,6 +11,7 @@ import com.google.common.base.Strings;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import java.nio.charset.StandardCharsets;
@@ -23,7 +24,7 @@ public class LogFinderService {
     Map<String,MethodModel> methodModelMap = new HashMap<>();   // holds all methodmodel
     List<String> classList = new LinkedList<>();
     Set<ClassObject> classObjectSet = new HashSet<>();
-    Map<String, List<String>> calledMethodMap = new HashMap<>();   // holds all called method
+    Map<String, List<InvokedMethod>> calledMethodMap = new HashMap<>();   // holds all called method
     Map<Integer, String> methodIdMapper = new HashMap<>();
 
 
@@ -41,6 +42,7 @@ public class LogFinderService {
             methodIdMapper.put(methodCounter, key);
             methodCounter++;
         }
+        generateGraph(methodModelMap);
         return methodModelMap;
 
     }
@@ -125,12 +127,14 @@ public class LogFinderService {
 
     public void listmethodLogs(CompilationUnit cu, MethodModel m){
         new VoidVisitorAdapter<Object>() {
-            int counter = 0;
+
             @Override
             public void visit(MethodDeclaration n, Object arg) {
                 super.visit(n, arg);
                 StringTokenizer str = new StringTokenizer(n.toString(), ";");
+                int counter = 0;
                 while (str.hasMoreElements()) {
+                    counter++;
                     String temp = str.nextToken();
                     for (String s : strArr) {
                         if (temp.contains(s)) {
@@ -138,8 +142,8 @@ public class LogFinderService {
                                 temp = temp.substring(temp.indexOf("{") + 1);
                             }
                             temp = temp.replace('}', ' ').trim();
-                            counter++;
-                            m.getLogList().add("log - "+counter+" : " + temp);
+
+                            m.getLogList().add("line - "+n.getBegin().get().line+" - " + temp);
                         }
                     }
                 }
@@ -195,24 +199,74 @@ public class LogFinderService {
                 super.visit(n, arg);
                 StringTokenizer str = new StringTokenizer(n.asMethodCallExpr().toString(),".");
                 String tempObj = str.nextToken();
+                int flag =0;
                 for(ClassObject clo:classObjectSet){
                     if(clo.getObjectName().equals(tempObj)){
+                        flag =1;
                         if(calledMethodMap.get(m.getId())==null){
-                            List<String> temp  =  new LinkedList<>();
-                            temp.add(clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size());
+                            List<InvokedMethod> temp  =  new LinkedList<>();
+                            String methodId =clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
+                            temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
                             calledMethodMap.put(m.getId(),temp);
                         }else{
-                            List<String> temp = calledMethodMap.get(m.getId());
-                            temp.add(clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size());
+                            List<InvokedMethod> temp = calledMethodMap.get(m.getId());
+                            String methodId =clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
+                            temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
                             calledMethodMap.put(m.getId(),temp);
                         }
                         break;
                     }
                 }
-
+            if(flag==0){
+                if(calledMethodMap.get(m.getId())==null){
+                    List<InvokedMethod> temp  =  new LinkedList<>();
+                    String methodId =m.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
+                    temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
+                    calledMethodMap.put(m.getId(),temp);
+                }else{
+                    List<InvokedMethod> temp = calledMethodMap.get(m.getId());
+                    String methodId =m.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
+                    temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
+                    calledMethodMap.put(m.getId(),temp);
+                }
+            }
 
             }
         }.visit(cu, null);
+    }
+
+
+    public void generateGraph(Map<String, MethodModel> methodModelMap){
+        StringBuilder graph = new StringBuilder();
+        graph.append("digraph cil_rad {").append("\n");
+        graph.append("rankdir = LR;").append("\n");
+        graph.append("node [shape=oval];").append("\n");
+        for(String key: methodModelMap.keySet()){
+            MethodModel m  = methodModelMap.get(key);
+            if(m.getInvokedMethodList()!=null){
+                List<InvokedMethod> temp = m.getInvokedMethodList();
+                for(InvokedMethod im:temp){
+                    try {
+                        //graph.append("  {"+key+"} -> {"+im.getMethodId()+"};\n");
+                        graph.append("  " + m.getId().hashCode()+ " -> " + methodModelMap.get(im.getMethodId()).getId().hashCode()+"[label =\" called line = "+im.getCalledLine()+ "\"];\n");
+                        graph.append("  " + m.getId().hashCode()+" [ label = \" "+m.toString()+"\" ]"+ ";\n");
+                        graph.append(methodModelMap.get(im.getMethodId()).getId().hashCode()+" [ label = \" " +m.toString()+"\" ]"+ ";\n");
+                        //System.out.println(methodModelMap.get(s).getMethodName());
+
+                    }catch (Exception e){
+
+                    }
+                }
+            }
+        }
+        graph.append("}");
+        try {
+            FileWriter writer = new FileWriter("Output.dot");
+            writer.write(String.valueOf(graph));
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

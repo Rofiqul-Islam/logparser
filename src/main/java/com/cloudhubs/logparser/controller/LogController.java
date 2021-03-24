@@ -20,7 +20,7 @@ import java.util.Map;
 public class LogController {
 
     @Autowired
-    LogFinderService crawlerService;
+    LogFinderService logFinderService;
 
     @Autowired
     TestService testService;
@@ -28,7 +28,7 @@ public class LogController {
 
     @GetMapping("/findAll")
     public List<MethodModel> findAllJavaClass(@RequestParam String  directoryName) throws IOException {
-        crawlerService.check(new File(directoryName));
+        logFinderService.check(new File(directoryName));
         return null;
     }
 
@@ -36,7 +36,7 @@ public class LogController {
     public Map<String,MethodModel> findLogVariable(@RequestParam String  directoryName) throws IOException {
         //testService.test(null);
        //return testService.check(new File(directoryName));
-        return crawlerService.findAllClass(new File(directoryName));
+        return logFinderService.findAllClass(new File(directoryName));
         //crawlerService.listMethodCalls(new File(directoryName));
     }
 }

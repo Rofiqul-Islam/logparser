@@ -19,7 +19,7 @@ public class MethodModel {
     Set<String> variableList  = new HashSet<>();
     List<String> logList = new LinkedList<>();
     List<String> parameterList = new LinkedList<>();
-    List<String> invokedMethodList = new LinkedList<>();
+    List<InvokedMethod> invokedMethodList = new LinkedList<>();
 
     public MethodModel(String methodDefination, String methodName, String classPath, int methodBegin, int methodEnd) {
         this.methodName = methodName;
@@ -121,11 +121,23 @@ public class MethodModel {
         this.parameterList = parameterList;
     }
 
-    public List<String> getInvokedMethodList() {
+    public List<InvokedMethod> getInvokedMethodList() {
         return invokedMethodList;
     }
 
-    public void setInvokedMethodList(List<String> invokedMethodList) {
+    public void setInvokedMethodList(List<InvokedMethod> invokedMethodList) {
         this.invokedMethodList = invokedMethodList;
+    }
+
+    @Override
+    public String toString() {
+        String str = methodName + "()\n"+
+                classPath+"\n ---------------------------------------------------------------------------- \n Log list = { \n";
+        for(String s :logList){
+            str = str + s.replace("\""," ")+"\n";
+        }
+        str =str+"\n }";
+        return str;
+
     }
 }

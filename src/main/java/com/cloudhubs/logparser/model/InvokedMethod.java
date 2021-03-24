@@ -4,28 +4,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class InvokedMethod {
-    private String methodName;
-    private String classPath;
+    private String methodId;
+    private Integer calledLine;
 
-    public InvokedMethod(String methodName, String classPath) {
-        this.methodName = methodName;
-        this.classPath = classPath;
+    public InvokedMethod(String methodId, Integer calledLine) {
+        this.methodId = methodId;
+        this.calledLine = calledLine;
     }
 
-    public String getMethodName() {
-        return methodName;
+    public String getMethodId() {
+        return methodId;
     }
 
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
+    public void setMethodId(String methodId) {
+        this.methodId = methodId;
     }
 
-    public String getClassPath() {
-        return classPath;
+    public Integer getCalledLine() {
+        return calledLine;
     }
 
-    public void setClassPath(String classPath) {
-        this.classPath = classPath;
+    public void setCalledLine(Integer calledLine) {
+        this.calledLine = calledLine;
     }
-
 }
