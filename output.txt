@@ -1,0 +1,38 @@
+1;1;request for login
+1;1;service called for login
+1;2;database query to check email and password validity
+1;5;login result sent
+2;2;check for person validity
+2;4;database person delete operation
+2;1;service called for delete person
+3;1;person data update request
+3;1;service called for update person
+3;3;database operation to find existing person
+3;5;database update operation
+6;2;database persistant operation
+6;1;register service
+7;1;request for find all person
+7;1;service called for find all person
+7;2;database operation to find all person
+9;1;person register request
+9;2;database persistant operation
+9;1;register service
+10;1;request for delete existing person
+10;2;check for person validity
+10;4;database person delete operation
+10;1;service called for delete person
+11;1;/**").allowCredentials(true).allowedOrigins("*").allowedMethods("*
+18;1;service called for update person
+18;3;database operation to find existing person
+18;5;database update operation
+20;1;service called for find all person
+20;2;database operation to find all person
+21;1;/**").allowCredentials(true).allowedOrigins("*").allowedMethods("*
+22;1;person finding request with id
+22;1;service called for finding person
+22;3;database find operation
+26;1;service called for finding person
+26;3;database find operation
+30;1;service called for login
+30;2;database query to check email and password validity
+30;5;login result sent

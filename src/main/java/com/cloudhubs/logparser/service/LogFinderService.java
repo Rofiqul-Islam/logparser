@@ -3,8 +3,10 @@ package com.cloudhubs.logparser.service;
 import com.cloudhubs.logparser.model.*;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.expr.*;
+import com.github.javaparser.ast.stmt.LocalClassDeclarationStmt;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import org.springframework.stereotype.Service;
 import com.google.common.base.Strings;
@@ -23,9 +25,12 @@ public class LogFinderService {
     public String temp;
     Map<String,MethodModel> methodModelMap = new HashMap<>();   // holds all methodmodel
     List<String> classList = new LinkedList<>();
-    Set<ClassObject> classObjectSet = new HashSet<>();
+    Map<String, Set<ClassObject>> classObjectMap = new HashMap<>();
+    //Set<ClassObject> classObjectSet = new HashSet<>();
     Map<String, List<InvokedMethod>> calledMethodMap = new HashMap<>();   // holds all called method
     Map<Integer, String> methodIdMapper = new HashMap<>();
+
+    FileWriter myWriter;
 
 
     public Map<String,MethodModel> findAllClass(File projectDir){
@@ -43,6 +48,8 @@ public class LogFinderService {
             methodCounter++;
         }
         generateGraph(methodModelMap);
+        csvGenerator();
+
         return methodModelMap;
 
     }
@@ -75,11 +82,11 @@ public class LogFinderService {
                         test(temp + "\n" + n + "}", methodModel);
                       //  System.out.println(n.getNameAsString()+" :- ");
                         methodVisitor(temp + "\n" + n + "}",methodModel);
-                        listmethodLogs(cu, methodModel);
                         methodModelMap.put(methodModel.getId(),methodModel);
 
                     }
                 }.visit(cu, null);
+                listmethodLogs(cu,path);
                 //System.out.println("****************************************");
                 //System.out.println("****************************************");
             } catch (FileNotFoundException e) {
@@ -125,13 +132,14 @@ public class LogFinderService {
     }
 
 
-    public void listmethodLogs(CompilationUnit cu, MethodModel m){
+    public void listmethodLogs(CompilationUnit cu,String path){
         new VoidVisitorAdapter<Object>() {
 
             @Override
             public void visit(MethodDeclaration n, Object arg) {
                 super.visit(n, arg);
                 StringTokenizer str = new StringTokenizer(n.toString(), ";");
+                //System.out.println(n+"-"+str.countTokens());
                 int counter = 0;
                 while (str.hasMoreElements()) {
                     counter++;
@@ -142,8 +150,14 @@ public class LogFinderService {
                                 temp = temp.substring(temp.indexOf("{") + 1);
                             }
                             temp = temp.replace('}', ' ').trim();
-
-                            m.getLogList().add("line - "+n.getBegin().get().line+" - " + temp);
+                            String tempKey = path+"_"+n.getNameAsString()+"_"+n.getParameters().size();
+                            MethodModel m = methodModelMap.get(tempKey);
+                            if(m != null) {
+                                m.getLogList().add(counter + ";" + temp.substring(temp.indexOf("\"")+1,temp.lastIndexOf("\"")));
+                            }
+                            else{
+                                System.out.println(tempKey);
+                            }
                         }
                     }
                 }
@@ -165,19 +179,25 @@ public class LogFinderService {
                 CompilationUnit cu = StaticJavaParser.parse(file, StandardCharsets.UTF_8);
                 new VoidVisitorAdapter<Object>() {
                     @Override
-                    public void visit(VariableDeclarationExpr n, Object arg) {
+                    public void visit(VariableDeclarator n, Object arg) {
                         super.visit(n, arg);
-                        for(VariableDeclarator v:n.getVariables()){
+
                             for(String s: classList){
-                                if(s.contains(v.getType().asString()+".java")){
+                                if(s.contains(n.getType().asString()+".java")){
                                     //System.out.println(v.getType()+" - "+s);
-                                    classObjectSet.add(new ClassObject(v.getType().asString(), s,v.getNameAsString()));
+                                    if(classObjectMap.get(path)== null){
+                                        classObjectMap.put(path,new HashSet<>());
+                                    }
+                                    classObjectMap.get(path).add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
+                                   // classObjectMap.add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
                                 }
                             }
-                        }
+
 
                     }
                 }.visit(cu, null);
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -191,33 +211,38 @@ public class LogFinderService {
 
 
     public void methodVisitor(String code, MethodModel m){
+
         CompilationUnit cu = StaticJavaParser.parse(code);
         new VoidVisitorAdapter<Object>() {
             int counter = 0;
             @Override
             public void visit(MethodCallExpr n, Object arg) {
                 super.visit(n, arg);
+                //System.out.println(n);
                 StringTokenizer str = new StringTokenizer(n.asMethodCallExpr().toString(),".");
                 String tempObj = str.nextToken();
                 int flag =0;
-                for(ClassObject clo:classObjectSet){
-                    if(clo.getObjectName().equals(tempObj)){
-                        flag =1;
-                        if(calledMethodMap.get(m.getId())==null){
-                            List<InvokedMethod> temp  =  new LinkedList<>();
-                            String methodId =clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
-                            temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
-                            calledMethodMap.put(m.getId(),temp);
-                        }else{
-                            List<InvokedMethod> temp = calledMethodMap.get(m.getId());
-                            String methodId =clo.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
-                            temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
-                            calledMethodMap.put(m.getId(),temp);
+                if(classObjectMap.get(m.getClassPath())!=null) {
+                    for (ClassObject clo : classObjectMap.get(m.getClassPath())) {
+                        if (clo.getObjectName().equals(tempObj)) {
+                            flag = 1;
+                            if (calledMethodMap.get(m.getId()) == null) {
+                                List<InvokedMethod> temp = new LinkedList<>();
+                                String methodId = clo.getClassPath() + "_" + n.getName() + "_" + n.getArguments().size();
+                                //System.out.println(methodId);
+                                temp.add(new InvokedMethod(methodId, n.getBegin().get().line));
+                                calledMethodMap.put(m.getId(), temp);
+                            } else {
+                                List<InvokedMethod> temp = calledMethodMap.get(m.getId());
+                                String methodId = clo.getClassPath() + "_" + n.getName() + "_" + n.getArguments().size();
+                                temp.add(new InvokedMethod(methodId, n.getBegin().get().line));
+                                calledMethodMap.put(m.getId(), temp);
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
-            if(flag==0){
+           /* if(flag==0){
                 if(calledMethodMap.get(m.getId())==null){
                     List<InvokedMethod> temp  =  new LinkedList<>();
                     String methodId =m.getClassPath()+"_"+n.getName()+"_"+n.getArguments().size();
@@ -229,7 +254,7 @@ public class LogFinderService {
                     temp.add(new InvokedMethod(methodId,n.getBegin().get().line));
                     calledMethodMap.put(m.getId(),temp);
                 }
-            }
+            }*/
 
             }
         }.visit(cu, null);
@@ -266,6 +291,39 @@ public class LogFinderService {
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    void csvGenerator(){
+        try {
+            myWriter = new FileWriter("output.txt");
+            int caseId =0;
+            for(String key: methodModelMap.keySet()){
+                recursion(key,caseId);
+                caseId++;
+            }
+            myWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    void recursion(String key, int caseId) throws IOException {
+        MethodModel m = methodModelMap.get(key);
+        if(m !=null) {
+            if (m.getLogList() != null) {
+                for (String log : m.getLogList()) {
+                    System.out.println(caseId + ";" + log);
+                    myWriter.write(caseId + ";" + log+"\n");
+                }
+            }
+            if (m.getInvokedMethodList() != null) {
+                for (InvokedMethod invokeMethod : m.getInvokedMethodList()) {
+                    recursion(invokeMethod.getMethodId(), caseId);
+                }
+            }
         }
     }
 
