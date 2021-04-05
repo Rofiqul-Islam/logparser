@@ -8,6 +8,7 @@ import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.expr.*;
 import com.github.javaparser.ast.stmt.LocalClassDeclarationStmt;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.google.common.base.Strings;
 
@@ -21,6 +22,10 @@ import java.util.*;
 
 @Service
 public class LogFinderService {
+    @Autowired
+    ConverterService converterService;
+
+
     String[] strArr = {".info", ".debug", ".warn", ".error", ".fatal", ".trace", ".all"};
     public String temp;
     Map<String,MethodModel> methodModelMap = new HashMap<>();   // holds all methodmodel
@@ -29,6 +34,7 @@ public class LogFinderService {
     //Set<ClassObject> classObjectSet = new HashSet<>();
     Map<String, List<InvokedMethod>> calledMethodMap = new HashMap<>();   // holds all called method
     Map<Integer, String> methodIdMapper = new HashMap<>();
+    List<String> topMethodList = new LinkedList<>();
 
     FileWriter myWriter;
 
@@ -49,6 +55,8 @@ public class LogFinderService {
         }
         generateGraph(methodModelMap);
         csvGenerator();
+        converterService.csvToXes("log.csv");
+
 
         return methodModelMap;
 
@@ -153,7 +161,7 @@ public class LogFinderService {
                             String tempKey = path+"_"+n.getNameAsString()+"_"+n.getParameters().size();
                             MethodModel m = methodModelMap.get(tempKey);
                             if(m != null) {
-                                m.getLogList().add(counter + ";" + temp.substring(temp.indexOf("\"")+1,temp.lastIndexOf("\"")));
+                                m.getLogList().add(new Log(temp.substring(temp.indexOf("\"")+1,temp.lastIndexOf("\"")),counter));
                             }
                             else{
                                 System.out.println(tempKey);
@@ -294,12 +302,30 @@ public class LogFinderService {
         }
     }
 
+    public void topMethodFinding(){
+        for(String key:methodModelMap.keySet()){
+            int flag = 0;
+            for(String tempKey : methodModelMap.keySet()){
+                MethodModel temp = methodModelMap.get(tempKey);
+                if(temp.getInvokedMethodList()!=null && temp.getInvokedMethodList().contains(key)){
+                    flag =1;
+                    break;
+                }
+            }
+            if(flag==0){
+                topMethodList.add(key);
+            }
+        }
+    }
+
     void csvGenerator(){
+        topMethodFinding();
         try {
-            myWriter = new FileWriter("output.txt");
+            myWriter = new FileWriter("log.csv");
             int caseId =0;
-            for(String key: methodModelMap.keySet()){
-                recursion(key,caseId);
+            for(String key: topMethodList){
+                int eventId = 0;
+                recursion(key,caseId,eventId);
                 caseId++;
             }
             myWriter.close();
@@ -307,24 +333,47 @@ public class LogFinderService {
             e.printStackTrace();
         }
 
-
     }
 
-    void recursion(String key, int caseId) throws IOException {
+    int recursion(String key, int caseId,int eventId) throws IOException {
         MethodModel m = methodModelMap.get(key);
+        Integer max = 0;
+        Map<Integer, Object> tempMap = new HashMap<>();
         if(m !=null) {
             if (m.getLogList() != null) {
-                for (String log : m.getLogList()) {
-                    System.out.println(caseId + ";" + log);
-                    myWriter.write(caseId + ";" + log+"\n");
+                for (Log log : m.getLogList()) {
+                    if(max<log.getLine()){
+                        max = log.getLine();
+                    }
+                    tempMap.put(log.getLine(),log.getLog());
+                    //myWriter.write(caseId + ";" + log.getLine()+";"+log.getLog());
                 }
             }
             if (m.getInvokedMethodList() != null) {
                 for (InvokedMethod invokeMethod : m.getInvokedMethodList()) {
-                    recursion(invokeMethod.getMethodId(), caseId);
+                    if(max<invokeMethod.getCalledLine()){
+                        max = invokeMethod.getCalledLine();
+                    }
+                    tempMap.put(invokeMethod.getCalledLine(),invokeMethod);
+                    //recursion(invokeMethod.getMethodId(), caseId);
                 }
             }
+            for(int i=0;i<=max;i++){
+                if(tempMap.get(i)!=null){
+                    Object x = tempMap.get(i);
+                    if(x instanceof String){
+                        myWriter.write(caseId + ";" + eventId+";"+x+"\n");
+                        eventId++;
+                    }
+                    else if(x instanceof InvokedMethod){
+                       eventId = recursion(((InvokedMethod) x).getMethodId(), caseId,eventId);
+                    }
+                }
+            }
+
         }
+        return eventId;
+
     }
 
 

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- XES version 1.0 -->
+<log xes.version="1.0" xmlns="http://code.deckfour.org/xes" xes.creator="Fluxicon Nitro">
+	<extension name="Concept" prefix="concept" uri="http://code.deckfour.org/xes/concept.xesext"/>
+	<extension name="Time" prefix="time" uri="http://code.deckfour.org/xes/time.xesext"/>
+	<extension name="Organizational" prefix="org" uri="http://code.deckfour.org/xes/org.xesext"/>
+	
+	<classifier name="Activity" keys="Activity"/>
+	<classifier name="activity classifier" keys="Activity"/>
+	<trace>
+		<string key="concept:name" value="197"/>
+		<event>
+			<string key="concept:name" value="Creating new exam"/>
+			<string key="Activity" value="Creating new exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="retunring persisted exam"/>
+			<string key="Activity" value="retunring persisted exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="111"/>
+		<event>
+			<string key="concept:name" value="Service perform database query to find all exams"/>
+			<string key="Activity" value="Service perform database query to find all exams"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="199"/>
+		<event>
+			<string key="concept:name" value="Service Setting the exam date"/>
+			<string key="Activity" value="Service Setting the exam date"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning updated exam"/>
+			<string key="Activity" value="Returning updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="211"/>
+		<event>
+			<string key="concept:name" value="Service called for exam pruning"/>
+			<string key="Activity" value="Service called for exam pruning"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the prunning result"/>
+			<string key="Activity" value="Returning the prunning result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="179"/>
+		<event>
+			<string key="concept:name" value="Service called for select choices wtih with choice data"/>
+			<string key="Activity" value="Service called for select choices wtih with choice data"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database query for finding choices with question id of choice"/>
+			<string key="Activity" value="Service perform database query for finding choices with question id of choice"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sevice set chosen flag on found choices"/>
+			<string key="Activity" value="Sevice set chosen flag on found choices"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database persist operation with chosen choices"/>
+			<string key="Activity" value="Service perform database persist operation with chosen choices"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database query for finding choices with exam id of choice"/>
+			<string key="Activity" value="Service perform database query for finding choices with exam id of choice"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Setting text answer to the chosen questions"/>
+			<string key="Activity" value="Setting text answer to the chosen questions"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database persist operation with updated questions"/>
+			<string key="Activity" value="Perform database persist operation with updated questions"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Exam marked as a valid exam"/>
+			<string key="Activity" value="Exam marked as a valid exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="136"/>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Create new review"/>
+			<string key="Activity" value="Create new review"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="116"/>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Update exam data"/>
+			<string key="Activity" value="Update exam data"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Persist updated exam"/>
+			<string key="Activity" value="Persist updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="138"/>
+		<event>
+			<string key="concept:name" value="Serevice called for sending exam start date reminder"/>
+			<string key="Activity" value="Serevice called for sending exam start date reminder"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Creating email"/>
+			<string key="Activity" value="Creating email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="sending email"/>
+			<string key="Activity" value="sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="91"/>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Checking exam validity"/>
+			<string key="Activity" value="Checking exam validity"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating exam status"/>
+			<string key="Activity" value="Updating exam status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="218"/>
+		<event>
+			<string key="concept:name" value="Checking exam existance"/>
+			<string key="Activity" value="Checking exam existance"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="94"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for finish exam"/>
+			<string key="Activity" value="HTTP request come for finish exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for finish exam"/>
+			<string key="Activity" value="service called for finish exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating the data of found exam"/>
+			<string key="Activity" value="Updating the data of found exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Setting exam status as done"/>
+			<string key="Activity" value="Setting exam status as done"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating the exam as correct"/>
+			<string key="Activity" value="Updating the exam as correct"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Performing persist operation on updated exam"/>
+			<string key="Activity" value="Performing persist operation on updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="52"/>
+		<event>
+			<string key="concept:name" value="Service called for sending email"/>
+			<string key="Activity" value="Service called for sending email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Configuration set up for sending eamil"/>
+			<string key="Activity" value="Configuration set up for sending eamil"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending email"/>
+			<string key="Activity" value="Sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="53"/>
+		<event>
+			<string key="concept:name" value="Performing database query to find all exam"/>
+			<string key="Activity" value="Performing database query to find all exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="10"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for submitting exam"/>
+			<string key="Activity" value="HTTP request come for submitting exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for submit exam"/>
+			<string key="Activity" value="service called for submit exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Update exam data"/>
+			<string key="Activity" value="Update exam data"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Persist updated exam"/>
+			<string key="Activity" value="Persist updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="11"/>
+		<event>
+			<string key="concept:name" value="HTTP requst come for find all exams"/>
+			<string key="Activity" value="HTTP requst come for find all exams"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending HTTP response"/>
+			<string key="Activity" value="Sending HTTP response"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database query to find all exams"/>
+			<string key="Activity" value="Service perform database query to find all exams"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="57"/>
+		<event>
+			<string key="concept:name" value="QmsService called for getting questions with configuration id"/>
+			<string key="Activity" value="QmsService called for getting questions with configuration id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="187"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for review exam"/>
+			<string key="Activity" value="HTTP request come for review exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for review exam"/>
+			<string key="Activity" value="service called for review exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending HTTP response"/>
+			<string key="Activity" value="Sending HTTP response"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Create new review"/>
+			<string key="Activity" value="Create new review"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="1"/>
+		<event>
+			<string key="concept:name" value="Service called for exam end date reminder"/>
+			<string key="Activity" value="Service called for exam end date reminder"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Creating email"/>
+			<string key="Activity" value="Creating email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="sending email"/>
+			<string key="Activity" value="sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="122"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for get exam by id"/>
+			<string key="Activity" value="HTTP request come for get exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for get exam"/>
+			<string key="Activity" value="service called for get exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="2"/>
+		<event>
+			<string key="concept:name" value="HTTP Request come for update choice"/>
+			<string key="Activity" value="HTTP Request come for update choice"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for select choices wtih with choice data"/>
+			<string key="Activity" value="Service called for select choices wtih with choice data"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database query for finding choices with question id of choice"/>
+			<string key="Activity" value="Service perform database query for finding choices with question id of choice"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sevice set chosen flag on found choices"/>
+			<string key="Activity" value="Sevice set chosen flag on found choices"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database persist operation with chosen choices"/>
+			<string key="Activity" value="Service perform database persist operation with chosen choices"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service perform database query for finding choices with exam id of choice"/>
+			<string key="Activity" value="Service perform database query for finding choices with exam id of choice"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Setting text answer to the chosen questions"/>
+			<string key="Activity" value="Setting text answer to the chosen questions"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database persist operation with updated questions"/>
+			<string key="Activity" value="Perform database persist operation with updated questions"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Exam marked as a valid exam"/>
+			<string key="Activity" value="Exam marked as a valid exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="145"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for taking an exam"/>
+			<string key="Activity" value="HTTP request come for taking an exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for take exam"/>
+			<string key="Activity" value="Service called for take exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Checking exam validity"/>
+			<string key="Activity" value="Checking exam validity"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating exam status"/>
+			<string key="Activity" value="Updating exam status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="200"/>
+		<event>
+			<string key="concept:name" value="Service called for saving all questions"/>
+			<string key="Activity" value="Service called for saving all questions"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Performing database query to find all questions with exam id"/>
+			<string key="Activity" value="Performing database query to find all questions with exam id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating question choices"/>
+			<string key="Activity" value="Updating question choices"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning question set"/>
+			<string key="Activity" value="Returning question set"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="146"/>
+		<event>
+			<string key="concept:name" value="Task for sending exam reminders"/>
+			<string key="Activity" value="Task for sending exam reminders"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Finding data about the exam of today"/>
+			<string key="Activity" value="Finding data about the exam of today"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Calling eamil service to send email about today's exam"/>
+			<string key="Activity" value="Calling eamil service to send email about today's exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Finding data about the exam of tomorrow"/>
+			<string key="Activity" value="Finding data about the exam of tomorrow"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Calling eamil service to send the email about tomomorrow's exam"/>
+			<string key="Activity" value="Calling eamil service to send the email about tomomorrow's exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Serevice called for sending exam start date reminder"/>
+			<string key="Activity" value="Serevice called for sending exam start date reminder"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Creating email"/>
+			<string key="Activity" value="Creating email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="sending email"/>
+			<string key="Activity" value="sending email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for exam end date reminder"/>
+			<string key="Activity" value="Service called for exam end date reminder"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Creating email"/>
+			<string key="Activity" value="Creating email"/>
+		</event>
+		<event>
+			<string key="concept:name" value="sending email"/>
+			<string key="Activity" value="sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="147"/>
+		<event>
+			<string key="concept:name" value="Service called for sending exam assignment notification"/>
+			<string key="Activity" value="Service called for sending exam assignment notification"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Email created"/>
+			<string key="Activity" value="Email created"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending email"/>
+			<string key="Activity" value="Sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="169"/>
+		<event>
+			<string key="concept:name" value="Perform database query to delete exam"/>
+			<string key="Activity" value="Perform database query to delete exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="148"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for create new exam"/>
+			<string key="Activity" value="HTTP request come for create new exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Exam service called for create new exam"/>
+			<string key="Activity" value="Exam service called for create new exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Email service called for sending exam notification"/>
+			<string key="Activity" value="Email service called for sending exam notification"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending HTTP response"/>
+			<string key="Activity" value="Sending HTTP response"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Creating new exam"/>
+			<string key="Activity" value="Creating new exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="retunring persisted exam"/>
+			<string key="Activity" value="retunring persisted exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for sending exam assignment notification"/>
+			<string key="Activity" value="Service called for sending exam assignment notification"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Email created"/>
+			<string key="Activity" value="Email created"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending email"/>
+			<string key="Activity" value="Sending email"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="6"/>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating the data of found exam"/>
+			<string key="Activity" value="Updating the data of found exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Setting exam status as done"/>
+			<string key="Activity" value="Setting exam status as done"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating the exam as correct"/>
+			<string key="Activity" value="Updating the exam as correct"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Performing persist operation on updated exam"/>
+			<string key="Activity" value="Performing persist operation on updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="105"/>
+		<event>
+			<string key="concept:name" value="Service called for find all exam based on exam status"/>
+			<string key="Activity" value="Service called for find all exam based on exam status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="filtered the exams based on their stutus"/>
+			<string key="Activity" value="filtered the exams based on their stutus"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="108"/>
+		<event>
+			<string key="concept:name" value="Service called for ger configration name"/>
+			<string key="Activity" value="Service called for ger configration name"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning configuration name"/>
+			<string key="Activity" value="returning configuration name"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="41"/>
+		<event>
+			<string key="concept:name" value="Performing database query to find exam by id"/>
+			<string key="Activity" value="Performing database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="64"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for find exams based on status"/>
+			<string key="Activity" value="HTTP request come for find exams based on status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending HTTP respnse"/>
+			<string key="Activity" value="Sending HTTP respnse"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for find all exam based on exam status"/>
+			<string key="Activity" value="Service called for find all exam based on exam status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="filtered the exams based on their stutus"/>
+			<string key="Activity" value="filtered the exams based on their stutus"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+	<trace>
+		<string key="concept:name" value="87"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for delete an exam"/>
+			<string key="Activity" value="HTTP request come for delete an exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Service called for delete exam"/>
+			<string key="Activity" value="Service called for delete exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Sending HTTP response"/>
+			<string key="Activity" value="Sending HTTP response"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to delete exam"/>
+			<string key="Activity" value="Perform database query to delete exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="returning the result"/>
+			<string key="Activity" value="returning the result"/>
+		</event>
+
+	</trace>
+</log>

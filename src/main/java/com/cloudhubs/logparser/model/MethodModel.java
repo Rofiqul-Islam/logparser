@@ -17,7 +17,7 @@ public class MethodModel {
     Set<String> modifiedVariableList = new HashSet<>();
     Set<String> RICList = new HashSet<>();
     Set<String> variableList  = new HashSet<>();
-    Set<String> logList = new HashSet<>();
+    Set<Log> logList = new HashSet<>();
     List<String> parameterList = new LinkedList<>();
     List<InvokedMethod> invokedMethodList = new LinkedList<>();
 
@@ -97,11 +97,11 @@ public class MethodModel {
         this.variableList = variableList;
     }
 
-    public Set<String> getLogList() {
+    public Set<Log> getLogList() {
         return logList;
     }
 
-    public void setLogList(Set<String> logList) {
+    public void setLogList(Set<Log> logList) {
         this.logList = logList;
     }
 
@@ -133,8 +133,8 @@ public class MethodModel {
     public String toString() {
         String str = methodName + "()\n"+
                 classPath+"\n ---------------------------------------------------------------------------- \n Log list = { \n";
-        for(String s :logList){
-            str = str + s.replace("\""," ")+"\n";
+        for(Log l :logList){
+            str = str + l.getLog().replace("\""," ")+"\n";
         }
         str =str+"\n }";
         return str;

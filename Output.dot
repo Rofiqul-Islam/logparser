@@ -1,187 +1,2286 @@
 digraph cil_rad {
 rankdir = LR;
 node [shape=oval];
-  -929423079 -> 510779662[label =" called line = 5"];
-  -929423079 [ label = " login()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -1522508976 -> -1883702221[label =" called line = 6"];
+  -1522508976 [ label = " updateChoices()
+/src/main/java/edu/baylor/ems/controller/ChoiceController.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for login
+HTTP Request come for update choice
 
  }" ];
-510779662 [ label = " login()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+-1883702221 [ label = " updateChoices()
+/src/main/java/edu/baylor/ems/controller/ChoiceController.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for login
+HTTP Request come for update choice
 
  }" ];
-  27614240 -> 206937728[label =" called line = 5"];
-  27614240 [ label = " deletePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+  -765435269 -> 313458668[label =" called line = 11"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-2;check for person validity
-4;database person delete operation
-1;service called for delete person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-206937728 [ label = " deletePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+313458668 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-2;check for person validity
-4;database person delete operation
-1;service called for delete person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  547779489 -> -1344204482[label =" called line = 6"];
-  547779489 [ label = " updateStudent()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -765435269 -> 313458668[label =" called line = 11"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person data update request
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
--1344204482 [ label = " updateStudent()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+313458668 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person data update request
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  924355156 -> 1614168287[label =" called line = 5"];
-  924355156 [ label = " getAllperson()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -765435269 -> 112057022[label =" called line = 13"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for find all person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-1614168287 [ label = " getAllperson()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+112057022 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for find all person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -2030036531 -> 1821565336[label =" called line = 6"];
-  -2030036531 [ label = " registerperson()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -765435269 -> 2024423398[label =" called line = 14"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person register request
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-1821565336 [ label = " registerperson()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+2024423398 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person register request
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  920830578 -> 27614240[label =" called line = 5"];
-  920830578 [ label = " deleteById()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -765435269 -> -1266120806[label =" called line = 15"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for delete existing person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-27614240 [ label = " deleteById()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+-1266120806 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;request for delete existing person
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -1344204482 -> 1249648296[label =" called line = 4"];
-  -1344204482 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+  -765435269 -> -1146395165[label =" called line = 16"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-1249648296 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+-1146395165 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -1344204482 -> 1249648296[label =" called line = 6"];
-  -1344204482 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+  -765435269 -> -1729524249[label =" called line = 22"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-1249648296 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+-1729524249 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -1344204482 -> 206937728[label =" called line = 6"];
-  -1344204482 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+  -765435269 -> 1543926999[label =" called line = 22"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-206937728 [ label = " updatePerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+1543926999 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for update person
-3;database operation to find existing person
-5;database update operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -1712550720 -> -329422418[label =" called line = 5"];
-  -1712550720 [ label = " findById()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+  -765435269 -> -1648058276[label =" called line = 21"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person finding request with id
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
--329422418 [ label = " findById()
-/backend/src/main/java/com/CSI5324/controller/PersonController.java
+-1648058276 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;person finding request with id
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-  -329422418 -> 206937728[label =" called line = 5"];
-  -329422418 [ label = " findPerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+  -765435269 -> 39354690[label =" called line = 32"];
+  -765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for finding person
-3;database find operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
 
  }" ];
-206937728 [ label = " findPerson()
-/backend/src/main/java/com/CSI5324/services/PersonService.java
+39354690 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
  ---------------------------------------------------------------------------- 
  Log list = { 
-1;service called for finding person
-3;database find operation
+Returning the result
+Perform database query to find exam by id
+Performing persist operation on updated exam
+Updating the exam as correct
+Checking the validity of exam questions
+Setting exam status as done
+Updating the data of found exam
+
+ }" ];
+  -1282261070 -> 2059247168[label =" called line = 8"];
+  -1282261070 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for submitting exam
+service called for submit exam
+
+ }" ];
+2059247168 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for submitting exam
+service called for submit exam
+
+ }" ];
+  -196491157 -> -568223020[label =" called line = 7"];
+  -196491157 [ label = " listAllExams()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP requst come for find all exams
+Sending HTTP response
+
+ }" ];
+-568223020 [ label = " listAllExams()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP requst come for find all exams
+Sending HTTP response
+
+ }" ];
+  385086562 -> 238643422[label =" called line = 6"];
+  385086562 [ label = " getExamsByStatus()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Sending HTTP respnse
+HTTP request come for find exams based on status
+
+ }" ];
+238643422 [ label = " getExamsByStatus()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Sending HTTP respnse
+HTTP request come for find exams based on status
+
+ }" ];
+  -548907548 -> 112057022[label =" called line = 3"];
+  -548907548 [ label = " setExamToProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+112057022 [ label = " setExamToProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> -375616858[label =" called line = 6"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-375616858 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> 154145509[label =" called line = 6"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+154145509 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> -173492811[label =" called line = 7"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-173492811 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> -777866300[label =" called line = 7"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-777866300 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> -380570899[label =" called line = 8"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-380570899 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> 1914921900[label =" called line = 8"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1914921900 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -757071274 -> 1085585648[label =" called line = 9"];
+  -757071274 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1085585648 [ label = " choicesFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  935906053 -> -17553005[label =" called line = 7"];
+  935906053 [ label = " deleteExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for delete exam
+HTTP request come for delete an exam
+Sending HTTP response
+
+ }" ];
+-17553005 [ label = " deleteExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for delete exam
+HTTP request come for delete an exam
+Sending HTTP response
+
+ }" ];
+  1207751983 -> 200636849[label =" called line = 10"];
+  1207751983 [ label = " takeExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Updating exam status
+Perform database query to find exam by id
+Checking exam validity
+Returning the result
+
+ }" ];
+200636849 [ label = " takeExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Updating exam status
+Perform database query to find exam by id
+Checking exam validity
+Returning the result
+
+ }" ];
+  188023789 -> -765435269[label =" called line = 9"];
+  188023789 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for finish exam
+service called for finish exam
+
+ }" ];
+-765435269 [ label = " finishExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for finish exam
+service called for finish exam
+
+ }" ];
+  -616700480 -> -497523391[label =" called line = 6"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-497523391 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -1188653246[label =" called line = 6"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1188653246 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -1568632120[label =" called line = 7"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1568632120 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -24492855[label =" called line = 7"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-24492855 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -1540022189[label =" called line = 8"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1540022189 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> 4117076[label =" called line = 8"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+4117076 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> 2030617975[label =" called line = 9"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2030617975 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -978108186[label =" called line = 10"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-978108186 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> -1645546777[label =" called line = 10"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1645546777 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> 2017361934[label =" called line = 11"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2017361934 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -616700480 -> 75468303[label =" called line = 12"];
+  -616700480 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+75468303 [ label = " questionsFromModelToEms()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  2059247168 -> 112057022[label =" called line = 10"];
+  2059247168 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Perform database query to find exam by id
+Returning the result
+Persist updated exam
+Update exam data
+
+ }" ];
+112057022 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Perform database query to find exam by id
+Returning the result
+Persist updated exam
+Update exam data
+
+ }" ];
+  2059247168 -> 2024423398[label =" called line = 11"];
+  2059247168 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Perform database query to find exam by id
+Returning the result
+Persist updated exam
+Update exam data
+
+ }" ];
+2024423398 [ label = " submitExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Perform database query to find exam by id
+Returning the result
+Persist updated exam
+Update exam data
+
+ }" ];
+  -1969497703 -> -1266120806[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1266120806 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> 1384296163[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+1384296163 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> -419330376[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-419330376 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> -359405228[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-359405228 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> 313458668[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+313458668 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> 200636849[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+200636849 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> -1509637939[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1509637939 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> -585282706[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-585282706 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> -79549514[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-79549514 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1969497703 -> 585805063[label =" called line = 9"];
+  -1969497703 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+585805063 [ label = " equals()
+/src/main/java/edu/baylor/ems/model/Exam.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -1590415810 -> -1950487596[label =" called line = 9"];
+  -1590415810 [ label = " getExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for get exam by id
+:  +  getExam  +  (  + id +  )
+service called for get exam
+
+ }" ];
+-1950487596 [ label = " getExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for get exam by id
+:  +  getExam  +  (  + id +  )
+service called for get exam
+
+ }" ];
+  -392567424 -> -1266120806[label =" called line = 9"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1266120806 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -1650194236[label =" called line = 12"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1650194236 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -1709072092[label =" called line = 12"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1709072092 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 1384296163[label =" called line = 13"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+1384296163 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -236363867[label =" called line = 13"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-236363867 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -1509637939[label =" called line = 14"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1509637939 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 1486124013[label =" called line = 14"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+1486124013 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -585282706[label =" called line = 15"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-585282706 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -1366727154[label =" called line = 15"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1366727154 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 313458668[label =" called line = 16"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+313458668 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -1307201362[label =" called line = 16"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-1307201362 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 1734676432[label =" called line = 17"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+1734676432 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -79549514[label =" called line = 18"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-79549514 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 846238712[label =" called line = 18"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+846238712 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> 585805063[label =" called line = 19"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+585805063 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -392567424 -> -2090323575[label =" called line = 19"];
+  -392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+-2090323575 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Set all required data in created review
+Perform database query to find exam by id
+returning the review
+Create new review
+
+ }" ];
+  -395032227 -> 313458668[label =" called line = 5"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+313458668 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> 313458668[label =" called line = 5"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+313458668 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> 200636849[label =" called line = 10"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+200636849 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> -1969497703[label =" called line = 10"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1969497703 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> 112057022[label =" called line = 12"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+112057022 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> 313458668[label =" called line = 13"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+313458668 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -395032227 -> 2024423398[label =" called line = 13"];
+  -395032227 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2024423398 [ label = " handleExamProgress()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1007627041 -> 1207751983[label =" called line = 8"];
+  1007627041 [ label = " takeExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for taking an exam
+Service called for take exam
+
+ }" ];
+1207751983 [ label = " takeExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+HTTP request come for taking an exam
+Service called for take exam
+
+ }" ];
+  -736998083 -> 1668418148[label =" called line = 16"];
+  -736998083 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+1668418148 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+  -736998083 -> -1758845385[label =" called line = 19"];
+  -736998083 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+-1758845385 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+  -736998083 -> 1816672885[label =" called line = 22"];
+  -736998083 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+1816672885 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+  -736998083 -> 62265264[label =" called line = 25"];
+  -736998083 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+62265264 [ label = " sendExamReminders()
+/src/main/java/edu/baylor/ems/component/TaskScheduling.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Task for sending exam reminders
+Finding data about the exam of tomorrow
+Calling eamil service to send email about today's exam
+Finding data about the exam of today
+Calling eamil service to send the email about tomomorrow's exam
+
+ }" ];
+  -1063230058 -> -899657307[label =" called line = 8"];
+  -1063230058 [ label = " createExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Email service called for sending exam notification
+Sending HTTP response
+HTTP request come for create new exam
+Exam service called for create new exam
+
+ }" ];
+-899657307 [ label = " createExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Email service called for sending exam notification
+Sending HTTP response
+HTTP request come for create new exam
+Exam service called for create new exam
+
+ }" ];
+  -1063230058 -> -477620057[label =" called line = 10"];
+  -1063230058 [ label = " createExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Email service called for sending exam notification
+Sending HTTP response
+HTTP request come for create new exam
+Exam service called for create new exam
+
+ }" ];
+-477620057 [ label = " createExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Email service called for sending exam notification
+Sending HTTP response
+HTTP request come for create new exam
+Exam service called for create new exam
+
+ }" ];
+  -1883702221 -> -1905964072[label =" called line = 10"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-1905964072 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> 2128814972[label =" called line = 11"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+2128814972 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -330844197[label =" called line = 18"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-330844197 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -1729524249[label =" called line = 26"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-1729524249 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> 1543926999[label =" called line = 26"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+1543926999 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -1729524249[label =" called line = 26"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-1729524249 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> 1543926999[label =" called line = 26"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+1543926999 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -1648058276[label =" called line = 25"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-1648058276 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -2032743373[label =" called line = 33"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-2032743373 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> -1507200400[label =" called line = 35"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+-1507200400 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> 1856084025[label =" called line = 37"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+1856084025 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  -1883702221 -> 39354690[label =" called line = 43"];
+  -1883702221 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+39354690 [ label = " selectChoices()
+/src/main/java/edu/baylor/ems/service/ChoiceService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for select choices wtih with choice data
+checking every choices for correct questions
+Service perform database query for finding choices with question id of choice
+Exam marked as a valid exam
+Service perform database persist operation with chosen choices
+Service perform database query for finding choices with exam id of choice
+Setting text answer to the chosen questions
+Returning the result
+Perform database persist operation with updated questions
+Sevice set chosen flag on found choices
+
+ }" ];
+  560891634 -> -392567424[label =" called line = 8"];
+  560891634 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+service called for review exam
+HTTP request come for review exam
+Sending HTTP response
+
+ }" ];
+-392567424 [ label = " reviewExam()
+/src/main/java/edu/baylor/ems/controller/ExamController.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+service called for review exam
+HTTP request come for review exam
+Sending HTTP response
+
+ }" ];
+  252074673 -> -1568632120[label =" called line = 6"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1568632120 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 339097927[label =" called line = 6"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+339097927 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> -1540022189[label =" called line = 7"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1540022189 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> -1540022189[label =" called line = 7"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1540022189 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> -1568632120[label =" called line = 7"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1568632120 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 367707858[label =" called line = 7"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+367707858 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 433196164[label =" called line = 8"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+433196164 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> -978108186[label =" called line = 9"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-978108186 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 202475877[label =" called line = 9"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+202475877 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 2017361934[label =" called line = 11"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+2017361934 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  252074673 -> 154145509[label =" called line = 14"];
+  252074673 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+154145509 [ label = " questionsFromQmsToModel()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  -899657307 -> 1087589881[label =" called line = 5"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+1087589881 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 1467312538[label =" called line = 6"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+1467312538 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> -337065927[label =" called line = 6"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+-337065927 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 112057022[label =" called line = 7"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+112057022 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> -79549514[label =" called line = 8"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+-79549514 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> -79549514[label =" called line = 9"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+-79549514 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> -79549514[label =" called line = 10"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+-79549514 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 585805063[label =" called line = 11"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+585805063 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 585805063[label =" called line = 12"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+585805063 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 585805063[label =" called line = 13"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+585805063 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -899657307 -> 793988775[label =" called line = 15"];
+  -899657307 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+793988775 [ label = " saveExam()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+retunring persisted exam
+Persisting exam to database
+Creating new exam
+
+ }" ];
+  -1811713590 -> 1087589881[label =" called line = 8"];
+  -1811713590 [ label = " setExamDate()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service Setting the exam date
+Returning updated exam
+
+ }" ];
+1087589881 [ label = " setExamDate()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service Setting the exam date
+Returning updated exam
+
+ }" ];
+  1357612836 -> -497523391[label =" called line = 11"];
+  1357612836 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+-497523391 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+  1357612836 -> -870872882[label =" called line = 11"];
+  1357612836 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+-870872882 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+  1357612836 -> -728612733[label =" called line = 11"];
+  1357612836 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+-728612733 [ label = " saveAllQuestionQmsDtos()
+/src/main/java/edu/baylor/ems/service/QuestionService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+Service called for saving all questions
+Returning question set
+Performing database query to find all questions with exam id
+Updating question choices
+
+ }" ];
+  1129762432 -> -359405228[label =" called line = 4"];
+  1129762432 [ label = " handleExamInit()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-359405228 [ label = " handleExamInit()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+  1129762432 -> -1146395165[label =" called line = 7"];
+  1129762432 [ label = " handleExamInit()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
+
+ }" ];
+-1146395165 [ label = " handleExamInit()
+/src/main/java/edu/baylor/ems/service/ExamService.java
+ ---------------------------------------------------------------------------- 
+ Log list = { 
 
  }" ];
 }
