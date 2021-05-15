@@ -6,9 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Test.findByCaseId", query = "SELECT t FROM Test t where  t.caseId =: caseId")
+        @NamedQuery(name = "LogModelDAO.findByCaseId", query = "SELECT t FROM LogModelDAO t where  t.caseId =: caseId")
 })
-public class Test {
+public class LogModelDAO {
 
     @javax.persistence.Id
     @Id

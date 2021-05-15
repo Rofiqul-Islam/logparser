@@ -1,7 +1,7 @@
 package com.cloudhubs.logparser.service;
 
-import com.cloudhubs.logparser.model.Test;
-import com.cloudhubs.logparser.repository.TestRepository;
+import com.cloudhubs.logparser.model.LogModelDAO;
+import com.cloudhubs.logparser.repository.ModelRepository;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -21,7 +21,7 @@ import java.util.*;
 @Service
 public class ConverterService {
     @Autowired
-    TestRepository testRepository;
+    ModelRepository testRepository;
 
     @PersistenceContext
     private EntityManager em;
@@ -36,7 +36,7 @@ public class ConverterService {
             for (CSVRecord r : csvParser) {
                 // Accessing Values by Column Index
                 StringTokenizer itr = new StringTokenizer(r.get(0), ";");
-                Test testModel = new Test();
+                LogModelDAO testModel = new LogModelDAO();
                 testModel.setCaseId(itr.nextToken());
                 caseIdSet.add(testModel.getCaseId());
                 testModel.setEventId(itr.nextToken());
@@ -46,6 +46,7 @@ public class ConverterService {
 
             }
             createXes();
+            createDot();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -53,7 +54,7 @@ public class ConverterService {
         return null;
     }
 
-    public List<Test> getALL() {
+    public List<LogModelDAO> getALL() {
         return testRepository.findAll();
     }
 
@@ -80,9 +81,9 @@ public class ConverterService {
                 myWriter.write("\t<trace>\n" +
                         "\t\t<string key=\"concept:name\" value=\"" + s + "\"/>\n");
 
-                Query query = em.createNamedQuery("Test.findByCaseId").setParameter("caseId", s);
-                List<Test> testList = query.getResultList();
-                for (Test t : testList) {
+                Query query = em.createNamedQuery("LogModelDAO.findByCaseId").setParameter("caseId", s);
+                List<LogModelDAO> testList = query.getResultList();
+                for (LogModelDAO t : testList) {
                     myWriter.write(t.toString());
                 }
                 myWriter.write("\n\t</trace>\n");
@@ -99,6 +100,37 @@ public class ConverterService {
 
 
 
+    }
+
+    public  void createDot(){
+        FileWriter myWriter = null;
+        try {
+            myWriter = new FileWriter("BusinessModel.dot");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        StringBuilder graph = new StringBuilder();
+        graph.append("strict digraph G {").append("\n");
+
+
+
+        for (String s : caseIdSet) {
+                Query query = em.createNamedQuery("LogModelDAO.findByCaseId").setParameter("caseId", s);
+                List<LogModelDAO> testList = query.getResultList();
+                graph.append("Start");
+                for (LogModelDAO t : testList) {
+                    graph.append(" -> "+t.getActivity().replace(" ","_").replace("'",""));
+                }
+                graph.append(";\n");
+        }
+        graph.append("}\n");
+        try {
+            System.out.println(graph.toString());
+            myWriter.write(graph.toString());
+            myWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

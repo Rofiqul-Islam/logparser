@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 
-public class DirExplorer {
+public class  DirExplorer {
     public interface FileHandler {
         void handle(int level, String path, File file);
     }

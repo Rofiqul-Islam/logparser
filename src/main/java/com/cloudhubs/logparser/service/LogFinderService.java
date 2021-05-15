@@ -6,6 +6,8 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.expr.*;
+import com.github.javaparser.ast.stmt.ForStmt;
+import com.github.javaparser.ast.stmt.IfStmt;
 import com.github.javaparser.ast.stmt.LocalClassDeclarationStmt;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +55,7 @@ public class LogFinderService {
             methodIdMapper.put(methodCounter, key);
             methodCounter++;
         }
-        generateGraph(methodModelMap);
+        //generateGraph(methodModelMap);
         csvGenerator();
         converterService.csvToXes("log.csv");
 
@@ -61,6 +63,8 @@ public class LogFinderService {
         return methodModelMap;
 
     }
+
+
 
 
 
@@ -82,19 +86,20 @@ public class LogFinderService {
                         super.visit(n, arg);
                         MethodModel methodModel = new MethodModel(n.getDeclarationAsString(),n.getNameAsString(), path, n.getBegin().get().line, n.getEnd().get().line);
                         for(Parameter p: n.getParameters()){
-                          //System.out.println(p.getType().asString());
+                            //System.out.println(p.getType().asString());
                             methodModel.getParameterList().add(p.getType().asString());
                         }
                         methodModel.calculateId();
                         //parsingMethodBody(n.getBody().get().toString(),methodModel);
-                        test(temp + "\n" + n + "}", methodModel);
-                      //  System.out.println(n.getNameAsString()+" :- ");
+                        findVariable(temp + "\n" + n + "}", methodModel);
+                        //  System.out.println(n.getNameAsString()+" :- ");
                         methodVisitor(temp + "\n" + n + "}",methodModel);
                         methodModelMap.put(methodModel.getId(),methodModel);
 
                     }
                 }.visit(cu, null);
                 listmethodLogs(cu,path);
+                findConditionalStmt(cu);
                 //System.out.println("****************************************");
                 //System.out.println("****************************************");
             } catch (FileNotFoundException e) {
@@ -105,7 +110,25 @@ public class LogFinderService {
         //listMethodCalls(projectDir);
     }
 
-    public void test(String code, MethodModel m) {
+    public void findConditionalStmt(CompilationUnit cu){
+        new VoidVisitorAdapter<Object>() {
+            @Override
+            public void visit(ForStmt n, Object arg) {
+                super.visit(n, arg);
+                System.out.println("For - "+n.asForStmt());
+            }
+        }.visit(cu, null);
+
+        new VoidVisitorAdapter<Object>() {
+            @Override
+            public void visit(IfStmt n, Object arg) {
+                super.visit(n, arg);
+                System.out.println("If - "+n.asIfStmt());
+            }
+        }.visit(cu, null);
+    }
+
+    public void findVariable(String code, MethodModel m) {
         try {
             CompilationUnit cu = StaticJavaParser.parse(code);
             new VoidVisitorAdapter<Object>() {
@@ -176,7 +199,7 @@ public class LogFinderService {
 
 
 
- //-----------------------------------------
+    //-----------------------------------------
     public List<ClassMethods> listMethodCalls(File projectDir) {
         List<ClassMethods> classMethodsList = new LinkedList<>();
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -190,16 +213,16 @@ public class LogFinderService {
                     public void visit(VariableDeclarator n, Object arg) {
                         super.visit(n, arg);
 
-                            for(String s: classList){
-                                if(s.contains(n.getType().asString()+".java")){
-                                    //System.out.println(v.getType()+" - "+s);
-                                    if(classObjectMap.get(path)== null){
-                                        classObjectMap.put(path,new HashSet<>());
-                                    }
-                                    classObjectMap.get(path).add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
-                                   // classObjectMap.add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
+                        for(String s: classList){
+                            if(s.contains(n.getType().asString()+".java")){
+                                //System.out.println(v.getType()+" - "+s);
+                                if(classObjectMap.get(path)== null){
+                                    classObjectMap.put(path,new HashSet<>());
                                 }
+                                classObjectMap.get(path).add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
+                                // classObjectMap.add(new ClassObject(n.getType().asString(), s,n.getNameAsString()));
                             }
+                        }
 
 
                     }
@@ -366,7 +389,7 @@ public class LogFinderService {
                         eventId++;
                     }
                     else if(x instanceof InvokedMethod){
-                       eventId = recursion(((InvokedMethod) x).getMethodId(), caseId,eventId);
+                        eventId = recursion(((InvokedMethod) x).getMethodId(), caseId,eventId);
                     }
                 }
             }
@@ -375,8 +398,5 @@ public class LogFinderService {
         return eventId;
 
     }
-
-
-
 }
 

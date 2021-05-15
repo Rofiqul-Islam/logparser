@@ -258,10 +258,6 @@
 			<string key="Activity" value="HTTP requst come for find all exams"/>
 		</event>
 		<event>
-			<string key="concept:name" value="Sending HTTP response"/>
-			<string key="Activity" value="Sending HTTP response"/>
-		</event>
-		<event>
 			<string key="concept:name" value="Service perform database query to find all exams"/>
 			<string key="Activity" value="Service perform database query to find all exams"/>
 		</event>
@@ -518,10 +514,6 @@
 			<string key="Activity" value="Email service called for sending exam notification"/>
 		</event>
 		<event>
-			<string key="concept:name" value="Sending HTTP response"/>
-			<string key="Activity" value="Sending HTTP response"/>
-		</event>
-		<event>
 			<string key="concept:name" value="Creating new exam"/>
 			<string key="Activity" value="Creating new exam"/>
 		</event>
@@ -614,10 +606,6 @@
 			<string key="Activity" value="HTTP request come for find exams based on status"/>
 		</event>
 		<event>
-			<string key="concept:name" value="Sending HTTP respnse"/>
-			<string key="Activity" value="Sending HTTP respnse"/>
-		</event>
-		<event>
 			<string key="concept:name" value="Service called for find all exam based on exam status"/>
 			<string key="Activity" value="Service called for find all exam based on exam status"/>
 		</event>
@@ -640,10 +628,6 @@
 		<event>
 			<string key="concept:name" value="Service called for delete exam"/>
 			<string key="Activity" value="Service called for delete exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Sending HTTP response"/>
-			<string key="Activity" value="Sending HTTP response"/>
 		</event>
 		<event>
 			<string key="concept:name" value="Perform database query to delete exam"/>

@@ -1,0 +1,34 @@
+strict digraph G {
+Start -> Creating_new_exam -> retunring_persisted_exam;
+Start -> Service_perform_database_query_to_find_all_exams -> returning_the_result;
+Start -> Service_Setting_the_exam_date -> Returning_updated_exam;
+Start -> Service_called_for_exam_pruning -> Returning_the_prunning_result;
+Start -> Service_called_for_select_choices_wtih_with_choice_data -> Service_perform_database_query_for_finding_choices_with_question_id_of_choice -> Sevice_set_chosen_flag_on_found_choices -> Service_perform_database_persist_operation_with_chosen_choices -> Service_perform_database_query_for_finding_choices_with_exam_id_of_choice -> Setting_text_answer_to_the_chosen_questions -> Perform_database_persist_operation_with_updated_questions -> Exam_marked_as_a_valid_exam -> Returning_the_result;
+Start -> Perform_database_query_to_find_exam_by_id -> Create_new_review;
+Start -> Perform_database_query_to_find_exam_by_id -> Update_exam_data -> Persist_updated_exam;
+Start -> Serevice_called_for_sending_exam_start_date_reminder -> Creating_email -> sending_email;
+Start -> Perform_database_query_to_find_exam_by_id -> Checking_exam_validity -> Updating_exam_status -> Returning_the_result;
+Start -> Checking_exam_existance -> returning_the_result;
+Start -> HTTP_request_come_for_finish_exam -> service_called_for_finish_exam -> Perform_database_query_to_find_exam_by_id -> Updating_the_data_of_found_exam -> Setting_exam_status_as_done -> Updating_the_exam_as_correct -> Performing_persist_operation_on_updated_exam;
+Start -> Service_called_for_sending_email -> Configuration_set_up_for_sending_eamil -> Sending_email;
+Start -> Performing_database_query_to_find_all_exam;
+Start -> HTTP_request_come_for_submitting_exam -> service_called_for_submit_exam -> Perform_database_query_to_find_exam_by_id -> Update_exam_data -> Persist_updated_exam;
+Start -> HTTP_requst_come_for_find_all_exams -> Service_perform_database_query_to_find_all_exams -> returning_the_result;
+Start -> QmsService_called_for_getting_questions_with_configuration_id -> Returning_the_result;
+Start -> HTTP_request_come_for_review_exam -> service_called_for_review_exam -> Sending_HTTP_response -> Perform_database_query_to_find_exam_by_id -> Create_new_review;
+Start -> Service_called_for_exam_end_date_reminder -> Creating_email -> sending_email;
+Start -> HTTP_request_come_for_get_exam_by_id -> service_called_for_get_exam;
+Start -> HTTP_Request_come_for_update_choice -> Service_called_for_select_choices_wtih_with_choice_data -> Service_perform_database_query_for_finding_choices_with_question_id_of_choice -> Sevice_set_chosen_flag_on_found_choices -> Service_perform_database_persist_operation_with_chosen_choices -> Service_perform_database_query_for_finding_choices_with_exam_id_of_choice -> Setting_text_answer_to_the_chosen_questions -> Perform_database_persist_operation_with_updated_questions -> Exam_marked_as_a_valid_exam -> Returning_the_result;
+Start -> HTTP_request_come_for_taking_an_exam -> Service_called_for_take_exam -> Perform_database_query_to_find_exam_by_id -> Checking_exam_validity -> Updating_exam_status -> Returning_the_result;
+Start -> Service_called_for_saving_all_questions -> Performing_database_query_to_find_all_questions_with_exam_id -> Updating_question_choices -> Returning_question_set;
+Start -> Task_for_sending_exam_reminders -> Finding_data_about_the_exam_of_today -> Calling_eamil_service_to_send_email_about_todays_exam -> Finding_data_about_the_exam_of_tomorrow -> Calling_eamil_service_to_send_the_email_about_tomomorrows_exam -> Serevice_called_for_sending_exam_start_date_reminder -> Creating_email -> sending_email -> Service_called_for_exam_end_date_reminder -> Creating_email -> sending_email;
+Start -> Service_called_for_sending_exam_assignment_notification -> Email_created -> Sending_email;
+Start -> Perform_database_query_to_delete_exam -> returning_the_result;
+Start -> HTTP_request_come_for_create_new_exam -> Exam_service_called_for_create_new_exam -> Email_service_called_for_sending_exam_notification -> Creating_new_exam -> retunring_persisted_exam -> Service_called_for_sending_exam_assignment_notification -> Email_created -> Sending_email;
+Start -> Perform_database_query_to_find_exam_by_id -> Updating_the_data_of_found_exam -> Setting_exam_status_as_done -> Updating_the_exam_as_correct -> Performing_persist_operation_on_updated_exam;
+Start -> Service_called_for_find_all_exam_based_on_exam_status -> filtered_the_exams_based_on_their_stutus -> returning_the_result;
+Start -> Service_called_for_ger_configration_name -> returning_configuration_name;
+Start -> Performing_database_query_to_find_exam_by_id -> returning_the_result;
+Start -> HTTP_request_come_for_find_exams_based_on_status -> Service_called_for_find_all_exam_based_on_exam_status -> filtered_the_exams_based_on_their_stutus -> returning_the_result;
+Start -> HTTP_request_come_for_delete_an_exam -> Service_called_for_delete_exam -> Perform_database_query_to_delete_exam -> returning_the_result;
+}

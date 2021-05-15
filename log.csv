@@ -22,12 +22,10 @@
 10;3;Update exam data
 10;4;Persist updated exam
 11;0;HTTP requst come for find all exams
-11;1;Sending HTTP response
-11;2;Service perform database query to find all exams
-11;3;returning the result
+11;1;Service perform database query to find all exams
+11;2;returning the result
 41;0;Performing database query to find exam by id
 41;1;returning the result
-46;0;:" + "choicesFromModelToEms" + "(" + choices + ")
 52;0;Service called for sending email
 52;1;Configuration set up for sending eamil
 52;2;Sending email
@@ -35,15 +33,13 @@
 57;0;QmsService called for getting questions with configuration id
 57;1;Returning the result
 64;0;HTTP request come for find exams based on status
-64;1;Sending HTTP respnse
-64;2;Service called for find all exam based on exam status
-64;3;filtered the exams based on their stutus
-64;4;returning the result
+64;1;Service called for find all exam based on exam status
+64;2;filtered the exams based on their stutus
+64;3;returning the result
 87;0;HTTP request come for delete an exam
 87;1;Service called for delete exam
-87;2;Sending HTTP response
-87;3;Perform database query to delete exam
-87;4;returning the result
+87;2;Perform database query to delete exam
+87;3;returning the result
 91;0;Perform database query to find exam by id
 91;1;Checking exam validity
 91;2;Updating exam status
@@ -65,9 +61,8 @@
 116;0;Perform database query to find exam by id
 116;1;Update exam data
 116;2;Persist updated exam
-122;0;:" + "getExam" + "(" + id + ")
-122;1;HTTP request come for get exam by id
-122;2;service called for get exam
+122;0;HTTP request come for get exam by id
+122;1;service called for get exam
 136;0;Perform database query to find exam by id
 136;1;Create new review
 138;0;Serevice called for sending exam start date reminder
@@ -96,12 +91,11 @@
 148;0;HTTP request come for create new exam
 148;1;Exam service called for create new exam
 148;2;Email service called for sending exam notification
-148;3;Sending HTTP response
-148;4;Creating new exam
-148;5;retunring persisted exam
-148;6;Service called for sending exam assignment notification
-148;7;Email created
-148;8;Sending email
+148;3;Creating new exam
+148;4;retunring persisted exam
+148;5;Service called for sending exam assignment notification
+148;6;Email created
+148;7;Sending email
 169;0;Perform database query to delete exam
 169;1;returning the result
 179;0;Service called for select choices wtih with choice data
