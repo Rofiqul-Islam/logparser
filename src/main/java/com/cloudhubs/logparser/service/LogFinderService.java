@@ -6,6 +6,7 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.expr.*;
+import com.github.javaparser.ast.stmt.ForEachStmt;
 import com.github.javaparser.ast.stmt.ForStmt;
 import com.github.javaparser.ast.stmt.IfStmt;
 import com.github.javaparser.ast.stmt.LocalClassDeclarationStmt;
@@ -124,6 +125,7 @@ public class LogFinderService {
             public void visit(IfStmt n, Object arg) {
                 super.visit(n, arg);
                 System.out.println("If - "+n.asIfStmt());
+                System.out.println("xyz "+n.getElseStmt());
             }
         }.visit(cu, null);
     }
@@ -149,6 +151,60 @@ public class LogFinderService {
                         m.getRICList().removeAll(m.getModifiedVariableList());
 
                     }
+                }
+            }.visit(cu, null);
+
+            new VoidVisitorAdapter<Object>() {
+                @Override
+                public void visit(ForEachStmt n, Object arg) {
+                    super.visit(n, arg);
+                    ForStmtModel tempForStmt = new ForStmtModel(n.getBegin().get().line, n.getEnd().get().line);
+                    StringTokenizer str = new StringTokenizer(n.toString(), ";");
+                    //System.out.println(n+"-"+str.countTokens());
+                    int counter = 0;
+                    while (str.hasMoreElements()) {
+                        counter++;
+                        String temp = str.nextToken();
+                        for (String s : strArr) {
+                            if (temp.contains(s)) {
+                                while (temp.contains("{")) {
+                                    temp = temp.substring(temp.indexOf("{") + 1);
+                                }
+                                temp = temp.replace('}', ' ').trim();
+                                if(temp!=null) {
+                                    tempForStmt.getLogList().add(new Log(temp.substring(temp.indexOf("\"") + 1, temp.lastIndexOf("\"")), counter));
+                                }
+                            }
+                        }
+                    }
+                    m.getForStmtList().add(tempForStmt);
+                }
+            }.visit(cu, null);
+
+            new VoidVisitorAdapter<Object>() {
+                @Override
+                public void visit(IfStmt n, Object arg) {
+                    super.visit(n, arg);
+                    IfStmtModel tempIfStmt = new IfStmtModel();
+                    StringTokenizer str = new StringTokenizer(n.toString(), ";");
+                    int counter = 0;
+                    while (str.hasMoreElements()) {
+                        counter++;
+                        String temp = str.nextToken();
+                        for (String s : strArr) {
+                            if (temp.contains(s)) {
+                                while (temp.contains("{")) {
+                                    temp = temp.substring(temp.indexOf("{") + 1);
+                                }
+                                temp = temp.replace('}', ' ').trim();
+                                if(temp!=null) {
+                                    tempIfStmt.getLogList().add(new Log(temp.substring(temp.indexOf("\"") + 1, temp.lastIndexOf("\"")), counter));
+                                }
+
+                            }
+                        }
+                    }
+                    m.getIfStmtModelList().add(tempIfStmt);
                 }
             }.visit(cu, null);
 
@@ -396,7 +452,6 @@ public class LogFinderService {
 
         }
         return eventId;
-
     }
 }
 

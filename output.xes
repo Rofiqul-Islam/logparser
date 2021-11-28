@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+ <?xml version="1.0" encoding="UTF-8" ?>
 <!-- XES version 1.0 -->
 <log xes.version="1.0" xmlns="http://code.deckfour.org/xes" xes.creator="Fluxicon Nitro">
 	<extension name="Concept" prefix="concept" uri="http://code.deckfour.org/xes/concept.xesext"/>

@@ -119,13 +119,13 @@ public class ConverterService {
                 List<LogModelDAO> testList = query.getResultList();
                 graph.append("Start");
                 for (LogModelDAO t : testList) {
-                    graph.append(" -> "+t.getActivity().replace(" ","_").replace("'",""));
+                    graph.append(" -> "+t.getActivity().replace(" ","_").replace("'","_"));
                 }
                 graph.append(";\n");
         }
         graph.append("}\n");
         try {
-            System.out.println(graph.toString());
+            //System.out.println(graph.toString());
             myWriter.write(graph.toString());
             myWriter.close();
         } catch (IOException e) {

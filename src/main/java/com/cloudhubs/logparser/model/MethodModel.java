@@ -1,7 +1,5 @@
 package com.cloudhubs.logparser.model;
 
-import com.github.javaparser.ast.type.Type;
-
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,6 +18,8 @@ public class MethodModel {
     Set<Log> logList = new HashSet<>();
     List<String> parameterList = new LinkedList<>();
     List<InvokedMethod> invokedMethodList = new LinkedList<>();
+    List<ForStmtModel> forStmtList = new LinkedList<>();
+    List<IfStmtModel> ifStmtModelList = new LinkedList<>();
 
     public MethodModel(String methodDefination, String methodName, String classPath, int methodBegin, int methodEnd) {
         this.methodName = methodName;
@@ -139,5 +139,21 @@ public class MethodModel {
         str =str+"\n }";
         return str;
 
+    }
+
+    public List<ForStmtModel> getForStmtList() {
+        return forStmtList;
+    }
+
+    public void setForStmtList(List<ForStmtModel> forStmtList) {
+        this.forStmtList = forStmtList;
+    }
+
+    public List<IfStmtModel> getIfStmtModelList() {
+        return ifStmtModelList;
+    }
+
+    public void setIfStmtModelList(List<IfStmtModel> ifStmtModelList) {
+        this.ifStmtModelList = ifStmtModelList;
     }
 }
