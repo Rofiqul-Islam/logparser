@@ -36,6 +36,7 @@ public class LogController {
     public Map<String,MethodModel> findLogVariable(@RequestParam String  directoryName) throws IOException {
         //testService.test(null);
        //return testService.check(new File(directoryName));
+        System.out.println(directoryName);
         return logFinderService.findAllClass(new File(directoryName));
         //crawlerService.listMethodCalls(new File(directoryName));
     }

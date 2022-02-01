@@ -16,11 +16,11 @@
 6;2;Setting exam status as done
 6;3;Updating the exam as correct
 6;4;Performing persist operation on updated exam
-10;0;HTTP request come for submitting exam
-10;1;service called for submit exam
-10;2;Perform database query to find exam by id
-10;3;Update exam data
-10;4;Persist updated exam
+8;0;HTTP request come for submitting exam
+8;1;service called for submit exam
+8;2;Perform database query to find exam by id
+8;3;Update exam data
+8;4;Persist updated exam
 11;0;HTTP requst come for find all exams
 11;1;Service perform database query to find all exams
 11;2;returning the result
@@ -36,10 +36,10 @@
 64;1;Service called for find all exam based on exam status
 64;2;filtered the exams based on their stutus
 64;3;returning the result
-87;0;HTTP request come for delete an exam
-87;1;Service called for delete exam
-87;2;Perform database query to delete exam
-87;3;returning the result
+86;0;HTTP request come for delete an exam
+86;1;Service called for delete exam
+86;2;Perform database query to delete exam
+86;3;returning the result
 91;0;Perform database query to find exam by id
 91;1;Checking exam validity
 91;2;Updating exam status
@@ -58,22 +58,22 @@
 108;1;returning configuration name
 111;0;Service perform database query to find all exams
 111;1;returning the result
-116;0;Perform database query to find exam by id
-116;1;Update exam data
-116;2;Persist updated exam
-122;0;HTTP request come for get exam by id
-122;1;service called for get exam
+115;0;Perform database query to find exam by id
+115;1;Update exam data
+115;2;Persist updated exam
+121;0;HTTP request come for get exam by id
+121;1;service called for get exam
 136;0;Perform database query to find exam by id
 136;1;Create new review
 138;0;Serevice called for sending exam start date reminder
 138;1;Creating email
 138;2;sending email
-145;0;HTTP request come for taking an exam
-145;1;Service called for take exam
-145;2;Perform database query to find exam by id
-145;3;Checking exam validity
-145;4;Updating exam status
-145;5;Returning the result
+144;0;HTTP request come for taking an exam
+144;1;Service called for take exam
+144;2;Perform database query to find exam by id
+144;3;Checking exam validity
+144;4;Updating exam status
+144;5;Returning the result
 146;0;Task for sending exam reminders
 146;1;Finding data about the exam of today
 146;2;Calling eamil service to send email about today's exam
@@ -107,11 +107,11 @@
 179;6;Perform database persist operation with updated questions
 179;7;Exam marked as a valid exam
 179;8;Returning the result
-187;0;HTTP request come for review exam
-187;1;service called for review exam
-187;2;Sending HTTP response
-187;3;Perform database query to find exam by id
-187;4;Create new review
+185;0;HTTP request come for review exam
+185;1;service called for review exam
+185;2;Sending HTTP response
+185;3;Perform database query to find exam by id
+185;4;Create new review
 197;0;Creating new exam
 197;1;retunring persisted exam
 199;0;Service Setting the exam date
@@ -124,3 +124,129 @@
 211;1;Returning the prunning result
 218;0;Checking exam existance
 218;1;returning the result
+221;0;Service called for exam end date reminder
+221;1;Creating email
+221;2;sending email
+222;0;HTTP Request come for update choice
+222;1;Service called for select choices wtih with choice data
+222;2;Service perform database query for finding choices with question id of choice
+222;3;Sevice set chosen flag on found choices
+222;4;Service perform database persist operation with chosen choices
+222;5;Service perform database query for finding choices with exam id of choice
+222;6;Setting text answer to the chosen questions
+222;7;Perform database persist operation with updated questions
+222;8;Exam marked as a valid exam
+222;9;Returning the result
+226;0;Perform database query to find exam by id
+226;1;Updating the data of found exam
+226;2;Setting exam status as done
+226;3;Updating the exam as correct
+226;4;Performing persist operation on updated exam
+228;0;HTTP request come for submitting exam
+228;1;service called for submit exam
+228;2;Perform database query to find exam by id
+228;3;Update exam data
+228;4;Persist updated exam
+231;0;HTTP requst come for find all exams
+231;1;Service perform database query to find all exams
+231;2;returning the result
+261;0;Performing database query to find exam by id
+261;1;returning the result
+272;0;Service called for sending email
+272;1;Configuration set up for sending eamil
+272;2;Sending email
+273;0;Performing database query to find all exam
+277;0;QmsService called for getting questions with configuration id
+277;1;Returning the result
+284;0;HTTP request come for find exams based on status
+284;1;Service called for find all exam based on exam status
+284;2;filtered the exams based on their stutus
+284;3;returning the result
+306;0;HTTP request come for delete an exam
+306;1;Service called for delete exam
+306;2;Perform database query to delete exam
+306;3;returning the result
+311;0;Perform database query to find exam by id
+311;1;Checking exam validity
+311;2;Updating exam status
+311;3;Returning the result
+314;0;HTTP request come for finish exam
+314;1;service called for finish exam
+314;2;Perform database query to find exam by id
+314;3;Updating the data of found exam
+314;4;Setting exam status as done
+314;5;Updating the exam as correct
+314;6;Performing persist operation on updated exam
+325;0;Service called for find all exam based on exam status
+325;1;filtered the exams based on their stutus
+325;2;returning the result
+328;0;Service called for ger configration name
+328;1;returning configuration name
+331;0;Service perform database query to find all exams
+331;1;returning the result
+335;0;Perform database query to find exam by id
+335;1;Update exam data
+335;2;Persist updated exam
+341;0;HTTP request come for get exam by id
+341;1;service called for get exam
+356;0;Perform database query to find exam by id
+356;1;Create new review
+358;0;Serevice called for sending exam start date reminder
+358;1;Creating email
+358;2;sending email
+364;0;HTTP request come for taking an exam
+364;1;Service called for take exam
+364;2;Perform database query to find exam by id
+364;3;Checking exam validity
+364;4;Updating exam status
+364;5;Returning the result
+366;0;Task for sending exam reminders
+366;1;Finding data about the exam of today
+366;2;Calling eamil service to send email about today's exam
+366;3;Finding data about the exam of tomorrow
+366;4;Calling eamil service to send the email about tomomorrow's exam
+366;5;Serevice called for sending exam start date reminder
+366;6;Creating email
+366;7;sending email
+366;8;Service called for exam end date reminder
+366;9;Creating email
+366;10;sending email
+367;0;Service called for sending exam assignment notification
+367;1;Email created
+367;2;Sending email
+368;0;HTTP request come for create new exam
+368;1;Exam service called for create new exam
+368;2;Email service called for sending exam notification
+368;3;Creating new exam
+368;4;retunring persisted exam
+368;5;Service called for sending exam assignment notification
+368;6;Email created
+368;7;Sending email
+389;0;Perform database query to delete exam
+389;1;returning the result
+399;0;Service called for select choices wtih with choice data
+399;1;Service perform database query for finding choices with question id of choice
+399;2;Sevice set chosen flag on found choices
+399;3;Service perform database persist operation with chosen choices
+399;4;Service perform database query for finding choices with exam id of choice
+399;5;Setting text answer to the chosen questions
+399;6;Perform database persist operation with updated questions
+399;7;Exam marked as a valid exam
+399;8;Returning the result
+405;0;HTTP request come for review exam
+405;1;service called for review exam
+405;2;Sending HTTP response
+405;3;Perform database query to find exam by id
+405;4;Create new review
+417;0;Creating new exam
+417;1;retunring persisted exam
+419;0;Service Setting the exam date
+419;1;Returning updated exam
+420;0;Service called for saving all questions
+420;1;Performing database query to find all questions with exam id
+420;2;Updating question choices
+420;3;Returning question set
+431;0;Service called for exam pruning
+431;1;Returning the prunning result
+438;0;Checking exam existance
+438;1;returning the result

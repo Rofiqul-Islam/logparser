@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- XES version 1.0 -->
 <log xes.version="1.0" xmlns="http://code.deckfour.org/xes" xes.creator="Fluxicon Nitro">
 	<extension name="Concept" prefix="concept" uri="http://code.deckfour.org/xes/concept.xesext"/>
@@ -108,7 +108,7 @@
 
 	</trace>
 	<trace>
-		<string key="concept:name" value="116"/>
+		<string key="concept:name" value="115"/>
 		<event>
 			<string key="concept:name" value="Perform database query to find exam by id"/>
 			<string key="Activity" value="Perform database query to find exam by id"/>
@@ -228,30 +228,6 @@
 
 	</trace>
 	<trace>
-		<string key="concept:name" value="10"/>
-		<event>
-			<string key="concept:name" value="HTTP request come for submitting exam"/>
-			<string key="Activity" value="HTTP request come for submitting exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="service called for submit exam"/>
-			<string key="Activity" value="service called for submit exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Perform database query to find exam by id"/>
-			<string key="Activity" value="Perform database query to find exam by id"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Update exam data"/>
-			<string key="Activity" value="Update exam data"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Persist updated exam"/>
-			<string key="Activity" value="Persist updated exam"/>
-		</event>
-
-	</trace>
-	<trace>
 		<string key="concept:name" value="11"/>
 		<event>
 			<string key="concept:name" value="HTTP requst come for find all exams"/>
@@ -280,7 +256,7 @@
 
 	</trace>
 	<trace>
-		<string key="concept:name" value="187"/>
+		<string key="concept:name" value="185"/>
 		<event>
 			<string key="concept:name" value="HTTP request come for review exam"/>
 			<string key="Activity" value="HTTP request come for review exam"/>
@@ -304,6 +280,18 @@
 
 	</trace>
 	<trace>
+		<string key="concept:name" value="121"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for get exam by id"/>
+			<string key="Activity" value="HTTP request come for get exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for get exam"/>
+			<string key="Activity" value="service called for get exam"/>
+		</event>
+
+	</trace>
+	<trace>
 		<string key="concept:name" value="1"/>
 		<event>
 			<string key="concept:name" value="Service called for exam end date reminder"/>
@@ -320,14 +308,30 @@
 
 	</trace>
 	<trace>
-		<string key="concept:name" value="122"/>
+		<string key="concept:name" value="144"/>
 		<event>
-			<string key="concept:name" value="HTTP request come for get exam by id"/>
-			<string key="Activity" value="HTTP request come for get exam by id"/>
+			<string key="concept:name" value="HTTP request come for taking an exam"/>
+			<string key="Activity" value="HTTP request come for taking an exam"/>
 		</event>
 		<event>
-			<string key="concept:name" value="service called for get exam"/>
-			<string key="Activity" value="service called for get exam"/>
+			<string key="concept:name" value="Service called for take exam"/>
+			<string key="Activity" value="Service called for take exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Checking exam validity"/>
+			<string key="Activity" value="Checking exam validity"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Updating exam status"/>
+			<string key="Activity" value="Updating exam status"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Returning the result"/>
+			<string key="Activity" value="Returning the result"/>
 		</event>
 
 	</trace>
@@ -368,34 +372,6 @@
 		<event>
 			<string key="concept:name" value="Exam marked as a valid exam"/>
 			<string key="Activity" value="Exam marked as a valid exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Returning the result"/>
-			<string key="Activity" value="Returning the result"/>
-		</event>
-
-	</trace>
-	<trace>
-		<string key="concept:name" value="145"/>
-		<event>
-			<string key="concept:name" value="HTTP request come for taking an exam"/>
-			<string key="Activity" value="HTTP request come for taking an exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Service called for take exam"/>
-			<string key="Activity" value="Service called for take exam"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Perform database query to find exam by id"/>
-			<string key="Activity" value="Perform database query to find exam by id"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Checking exam validity"/>
-			<string key="Activity" value="Checking exam validity"/>
-		</event>
-		<event>
-			<string key="concept:name" value="Updating exam status"/>
-			<string key="Activity" value="Updating exam status"/>
 		</event>
 		<event>
 			<string key="concept:name" value="Returning the result"/>
@@ -576,6 +552,30 @@
 
 	</trace>
 	<trace>
+		<string key="concept:name" value="8"/>
+		<event>
+			<string key="concept:name" value="HTTP request come for submitting exam"/>
+			<string key="Activity" value="HTTP request come for submitting exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="service called for submit exam"/>
+			<string key="Activity" value="service called for submit exam"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Perform database query to find exam by id"/>
+			<string key="Activity" value="Perform database query to find exam by id"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Update exam data"/>
+			<string key="Activity" value="Update exam data"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Persist updated exam"/>
+			<string key="Activity" value="Persist updated exam"/>
+		</event>
+
+	</trace>
+	<trace>
 		<string key="concept:name" value="108"/>
 		<event>
 			<string key="concept:name" value="Service called for ger configration name"/>
@@ -620,7 +620,7 @@
 
 	</trace>
 	<trace>
-		<string key="concept:name" value="87"/>
+		<string key="concept:name" value="86"/>
 		<event>
 			<string key="concept:name" value="HTTP request come for delete an exam"/>
 			<string key="Activity" value="HTTP request come for delete an exam"/>

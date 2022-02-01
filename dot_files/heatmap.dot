@@ -1,0 +1,318 @@
+strict digraph G {
+node [shape=box, height = 1];
+ratio=fill;
+
+n1[label = "Start"];
+n2[label = "request_for \n update_exam"];
+n3[label = "perform_database \n query_to_find \n exam_by_id"];
+n4[label = "updating_the_data \n of_found_exam"];
+n5[label = "updating_the_exam \n as_correct"];
+n6[label = "performing_persist \n db_operation_on \n updated_exam"];
+n7[label = "returning \n the_result"];
+n8[label = "request_for_find \n exam_by_id"];
+n10[label = "request_for_find \n all_exam_based \n on_exam_status"];
+n11[label = "filtered_the \n exams_based_on \n their_stutus"];
+n12[label = "request_for \n findall_exams"];
+n13[label = "perform_database_query \n to_find_all_exams"];
+n14[label = "request_for \n sending_exam_start \n date_reminder"];
+n15[label = "creating_email \n with_start_date"];
+n16[label = "performing_db_query \n to_find_recipients"]
+n17[label = "sending_email"];
+n18[label = "request_for_sending \n exam_reminders"];
+n19[label = "finding_data_about \n the_exam_of_today"];
+n20[label = "creating_email \n with_date"];
+n21[label = "finding_data \n about_the_exam \n of_tomorrow"];
+n22[label = "reuqest_for_sending \n exam_assignment \n notification"];
+n23[label = "notification \n email_created"];
+n24[label = "request_for \n create_new_exam"];
+n25[label = "exam_service_called \n for_create_new_exam"];
+n26[label = "email_service_called \n for_sending \n exam_notification"];
+n27[label = "request_for \n delete_exam"];
+n28[label = "perform_database_query \n to_delete_exam"];
+n29[label = "request_for \n select_choices"];
+n30[label = "db_query_to \n find_choices \n with_question_id"];
+n31[label = "set_chosen_flag \n on_found_choices"];
+n32[label = "setting_answer_to \n the_chosen_questions"];
+n33[label = "db_persist_operation \n with_updated_questions"];
+n34[label = "exam_marked_as \n a_valid_exam"];
+n37[label = "persist_exam_to_db"];
+n38[label = "retunring_persisted_exam"];
+n39[label = "request_for \n update_choice_of \n all_questions_with_id"];
+n40[label = "performing_database_query \n to_find_all_questions \n with_exam_id"];
+n41[label = "updating_question_choices"];
+n42[label = "returning_question_set"];
+n43[label = "request_for_checking \n exam_existance"];
+n44[label = "perform_database \n query_to_check \n exam_existance"];
+
+
+n1 -> n2 [label="20"];
+n2 -> n3 [label="20"]; 
+n3 -> n4[label="20"];
+n4 -> n5 [label="19"];
+n5 -> n6 [label="19"];
+n6 -> n7 [label="19"];
+
+
+n1 -> n8 [label="48"];
+n8 -> n3 [label="48"];
+n3 -> n7 [label="48"];
+
+n1 -> n10 [label="17"];
+n10 -> n11 [label="17"];
+n11 -> n7 [label="15"];
+
+n1 -> n12 [label="12"];
+n12 -> n13 [label="12"];
+n13 -> n7 [label="12"];
+
+n1 -> n14 [label="18"];
+n14 -> n3[label="18"];
+n3 -> n15 [label="18"];
+n15 -> n16 [label="18"];
+n16  -> n17 [label="98"];
+
+
+n1 -> n18 [label="15"];
+n18 -> n19 [label="15"];
+n19 -> n20 [label="15"];
+n20 -> n16 [label="28"];
+n16 -> n17 [label="98"];
+
+n1 -> n18 [label="15"];
+n18 -> n21 [label="15"];
+n21 -> n20 [label="15"];
+n20 -> n16 [label="30"];
+n16 -> n17 [label="98"];
+
+
+n1 -> n22 [label="28"];
+n22 -> n23 [label="28"];
+n23 -> n16 [label="28"];
+n16 -> n17 [label="98"];
+
+n1 -> n24 [label="30"];
+n24 -> n25 [label="30"];
+n25 -> n26 [label="30"];
+n26 -> n16 [label="30"];
+n16 -> n17 [label="98"];
+
+n1 -> n27 [label="22"];
+n27 -> n28 [label="22"];
+n28 -> n7 [label="22"];
+
+n1 -> n29 [label="12"];
+n29 -> n30 [label="12"];
+n30 -> n31 [label="12"];
+n31 -> n32 [label="12"];
+n32 -> n33[label="12"];
+n33 -> n34 [label="12"];
+n34 -> n7 [label="12"];
+
+n1 -> n24 [label="27"];
+n24 -> n25 [label="27"];
+n25 -> n37 [label="25"];
+n37 -> n38 [label="25"];
+
+n1 -> n39 [label="22"];
+n39 -> n40 [label="22"];
+n40 -> n41 [label="22"];
+n41 -> n42 [label="22"];
+
+n1 -> n43 [label="32"];
+n43 -> n44 [label = "32"];
+n44 -> n7 [label="30"];
+subgraph cluster_0 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n20;
+		
+ 		label="ems_service_EmailService \n sendExamEndDateReminder";
+}
+subgraph cluster_1 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n39;
+ 		label="ems_controller \n ChoiceController_updateChoices";
+}
+subgraph cluster_2 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n4, n5, n6;
+ 		label="ems_service \n ExamService_updateExam";
+}
+subgraph cluster_3 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n2;
+ 		label="ems_controller \n ExamController_updateExam";
+}
+
+subgraph cluster_4 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n13;
+ 		label="ems_service \n ExamService_findAllExams";
+}
+subgraph cluster_5 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n12;
+ 		label="ems_controller \n ExamController_listAllExams";
+}
+subgraph cluster_6 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n3;
+ 		label="ems_service \n ExamService_findById";
+}
+
+
+subgraph cluster_7 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n11;
+ 		label="ems_service_ExamService \n findAllExamsByStatus";
+}
+subgraph cluster_8 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n10;
+ 		label="ems_controller_ExamController \n getExamsByStatus";
+}
+subgraph cluster_9 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n28;
+ 		label="ems_service \n ExamService_deleteExam";
+}
+subgraph cluster_10 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n27;
+ 		label="ems_controller \n ExamController_deleteExam";
+}
+
+
+subgraph cluster_11 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n8;
+ 		label="ems_controller \n ExamController_getExam";
+}
+
+subgraph cluster_12 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n14, n18;
+ 		label="ems_controller \n ExamController_sendExamReminder";
+}
+
+subgraph cluster_13 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n15;
+ 		label="ems_service_EmailService \n sendExamStartDateReminder";
+}
+
+
+subgraph cluster_14 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n19, n21;
+ 		label="ems_component_TaskScheduling \n sendExamReminders";
+}
+
+
+subgraph cluster_15 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n22;
+ 		label="ems_controller_ExamController \n sendAssignmentNotification";
+}
+subgraph cluster_16 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n16, n17;
+ 		label="ems_service_EmailService \n sendEmail";
+}
+
+subgraph cluster_17 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n23;
+ 		label="ems_service_EmailService \n sendExamAssignmentNotification";
+}
+subgraph cluster_18 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n37, n38;
+ 		label="ems_service \n ExamService_saveExam";
+}
+
+
+subgraph cluster_19 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n24, n25, n26;
+ 		label="ems_controller \n ExamController_createExam";
+}
+
+subgraph cluster_20 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n29;
+ 		label="ems_controller \n ExamController_selectChoices";
+}
+
+subgraph cluster_21 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n30, n31, n32, n33, n34;
+ 		label="ems_service \n ChoiceService_selectChoices";
+}
+
+
+subgraph cluster_22 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n40, n41, n42;
+ 		label="ems_service_QuestionService \n saveAllQuestionQmsDtos";
+}
+subgraph cluster_23 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n43;
+ 		label="ems_controller \n ExamController_isExamExist";
+}
+subgraph cluster_24 {
+	 style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		n44;
+ 		label="ems_service \n ExamService_isExamExist";
+}
+}
