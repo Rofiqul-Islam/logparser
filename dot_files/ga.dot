@@ -1,0 +1,14 @@
+strict digraph G {
+
+n1[label = "F1"];
+n2[label = "F2"];
+n3[label = "F3"];
+n4[label = "F4"];
+n5[label = "F5"];
+n6[label = "F6"];
+n7[label = "F7"];
+n8[label = "F8"];
+
+
+
+}
