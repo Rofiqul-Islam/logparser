@@ -23,6 +23,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+/**
+ * @author Md Rofiqul Islam
+ */
+
 @Service
 public class LogFinderService {
     @Autowired
@@ -42,8 +46,11 @@ public class LogFinderService {
     FileWriter myWriter;
     int clusterNumber = 0;
 
-
-
+    /**
+     * Method for find all classes in target directory
+     * @param projectDir
+     * @return
+     */
     public Map<String, MethodModel> findAllClass(File projectDir) {
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
             ClassMethods classMethods = new ClassMethods(path, new LinkedList<>());
@@ -67,7 +74,10 @@ public class LogFinderService {
 
     }
 
-
+    /**
+     * Method for checking project directory
+     * @param projectDir
+     */
     public void check(File projectDir) {
 
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -110,6 +120,10 @@ public class LogFinderService {
         //listMethodCalls(projectDir);
     }
 
+    /**
+     * Method for finding conditional statements
+     * @param cu
+     */
     public void findConditionalStmt(CompilationUnit cu) {
         new VoidVisitorAdapter<Object>() {
             @Override
@@ -129,6 +143,11 @@ public class LogFinderService {
         }.visit(cu, null);
     }
 
+    /**
+     * Method for finding variables in a code
+     * @param code
+     * @param m
+     */
     public void findVariable(String code, MethodModel m) {
         try {
             CompilationUnit cu = StaticJavaParser.parse(code);
@@ -217,7 +236,11 @@ public class LogFinderService {
         this.temp = str;
     }
 
-
+    /**
+     * Method for finding logs in a code block
+     * @param cu
+     * @param path
+     */
     public void listmethodLogs(CompilationUnit cu, String path) {
         new VoidVisitorAdapter<Object>() {
 
@@ -238,10 +261,19 @@ public class LogFinderService {
                             temp = temp.replace('}', ' ').trim();
                             String tempKey = path + "_" + n.getNameAsString() + "_" + n.getParameters().size();
                             MethodModel m = methodModelMap.get(tempKey);
-                            if (m != null) {
-                                m.getLogList().add(new Log(temp.substring(temp.indexOf("\"") + 1, temp.lastIndexOf("\"")), counter));
-                            } else {
-                                System.out.println(tempKey);
+                            try {
+                                if (m != null) {
+                                    temp = temp.substring(temp.indexOf("\"") + 1, temp.lastIndexOf("\""));
+                                    if (temp.contains("#")) {
+                                        int tempPos = temp.indexOf('#');
+                                        temp = temp.substring(0, tempPos);
+                                    }
+                                    m.getLogList().add(new Log(temp, counter));
+                                } else {
+                                    System.out.println(tempKey);
+                                }
+                            }catch (Exception e){
+                                System.out.println(e);
                             }
                         }
                     }
@@ -250,8 +282,11 @@ public class LogFinderService {
         }.visit(cu, null);
     }
 
-
-    //-----------------------------------------
+    /**
+     * Method for generate methodcall list
+     * @param projectDir
+     * @return
+     */
     public List<ClassMethods> listMethodCalls(File projectDir) {
         List<ClassMethods> classMethodsList = new LinkedList<>();
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -290,7 +325,11 @@ public class LogFinderService {
         return classMethodsList;
     }
 
-
+    /**
+     * Method visitor function, finds out method body from given codeblocks
+     * @param code
+     * @param m
+     */
     public void methodVisitor(String code, MethodModel m) {
 
         CompilationUnit cu = StaticJavaParser.parse(code);
@@ -342,7 +381,9 @@ public class LogFinderService {
         }.visit(cu, null);
     }
 
-
+    /**
+     * Top level method finder
+     */
     public void topMethodFinding() {
         for (String key : methodModelMap.keySet()) {
             int flag = 0;
@@ -359,7 +400,9 @@ public class LogFinderService {
         }
     }
 
-
+    /**
+     * Generate output in CSV format
+     */
     void csvGenerator() {
         topMethodFinding();
         try {
@@ -376,8 +419,12 @@ public class LogFinderService {
         }
 
     }
-    List<String> clusterList =  new ArrayList<>();
 
+    List<String> clusterList = new ArrayList<>();
+
+    /**
+     * Generate output graph
+     */
     public void generateGraph() {
         topMethodFinding();
 
@@ -388,15 +435,15 @@ public class LogFinderService {
                     "rankdir=LR;\n" +
                     "size=\"50,50\"; ratio=fill;\n");
             for (String key : topMethodList) {
-                if(methodModelMap.get(key)!=null) {
+                if (methodModelMap.get(key) != null) {
                     String res = "";
                     res = invokedMethodTraverse(key, res);
-                    if(res.length()>0) {
-                        myWriter.write("Start"+res+" -> end;\n");
+                    if (res.length() > 0) {
+                        myWriter.write("Start" + res + " -> end;\n");
                     }
                 }
             }
-            for(String str:clusterList){
+            for (String str : clusterList) {
                 myWriter.write(str);
             }
             myWriter.write("Start [shape=Mdiamond];\n" +
@@ -408,6 +455,13 @@ public class LogFinderService {
         }
     }
 
+    /**
+     * Method for traversing invoked methods
+     * @param key
+     * @param res
+     * @return
+     * @throws IOException
+     */
     String invokedMethodTraverse(String key, String res) throws IOException {
         MethodModel m = methodModelMap.get(key);
         Integer max = 0;
@@ -432,18 +486,18 @@ public class LogFinderService {
                 }
             }
             List<String> cluster = new ArrayList<>();
-           // int flag =0;
+            // int flag =0;
             for (int i = 0; i <= max; i++) {
                 if (tempMap.get(i) != null) {
                     Object x = tempMap.get(i);
                     if (x instanceof String) {
-                        String str = x.toString().replaceAll(" ","_").replaceAll("'","");
+                        String str = x.toString().replaceAll(" ", "_").replaceAll("'", "");
                         /*if(flag==1){
                             myWriter.write(temp);
                             flag=0;
                         }*/
                         //temp = str;
-                       res+=" -> "+str;
+                        res += " -> " + str;
                         cluster.add(str.toString());
 
                     } else if (x instanceof InvokedMethod) {
@@ -453,8 +507,8 @@ public class LogFinderService {
                 }
             }
 
-            if(cluster.size()>0) {
-                String subgraph = "subgraph cluster_" +clusterNumber+ " {\n\t style=filled;\n" +
+            if (cluster.size() > 0) {
+                String subgraph = "subgraph cluster_" + clusterNumber + " {\n\t style=filled;\n" +
                         "\t\tcolor=lightgrey;\n\t\tnode [style=filled,color=white];\n";
                 for (String st : cluster) {
                     subgraph += st + ", ";
@@ -462,7 +516,7 @@ public class LogFinderService {
                 subgraph = subgraph.substring(0, subgraph.length() - 2);
                 subgraph += ";\n";
 
-                subgraph += " \t\tlabel=\"" + m.getClassPath().replaceAll("/", "_").replaceAll(".java", "").substring(1).replaceAll("src_main_edu_baylor_","") + "_" + m.getMethodName() + "\";\n}\n";
+                subgraph += " \t\tlabel=\"" + m.getClassPath().replaceAll("/", "_").replaceAll(".java", "").substring(1).replaceAll("src_main_edu_baylor_", "") + "_" + m.getMethodName() + "\";\n}\n";
                 clusterList.add(subgraph);
                 clusterNumber++;
             }
@@ -471,7 +525,14 @@ public class LogFinderService {
         return res;
     }
 
-
+    /**
+     * MethodModel Graph traversal function
+     * @param key
+     * @param caseId
+     * @param eventId
+     * @return
+     * @throws IOException
+     */
     int recursion(String key, int caseId, int eventId) throws IOException {
         MethodModel m = methodModelMap.get(key);
         Integer max = 0;

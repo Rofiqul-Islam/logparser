@@ -15,6 +15,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Md Rofiqul Islam
+ */
+
 @RequestMapping("/logparser")
 @RestController
 public class LogController {
@@ -25,13 +29,24 @@ public class LogController {
     @Autowired
     TestService testService;
 
-
+    /**
+     * Find all java classes under target directory
+     * @param directoryName
+     * @return
+     * @throws IOException
+     */
     @GetMapping("/findAll")
     public List<MethodModel> findAllJavaClass(@RequestParam String  directoryName) throws IOException {
         logFinderService.check(new File(directoryName));
         return null;
     }
 
+    /**
+     * Finds methodModel with logs
+     * @param directoryName
+     * @return
+     * @throws IOException
+     */
     @GetMapping("/findLogVariable")
     public Map<String,MethodModel> findLogVariable(@RequestParam String  directoryName) throws IOException {
         //testService.test(null);

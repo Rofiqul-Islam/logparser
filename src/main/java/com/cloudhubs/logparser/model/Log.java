@@ -1,5 +1,8 @@
 package com.cloudhubs.logparser.model;
 
+/**
+ * @author Md Rofiqul Islam
+ */
 public class Log {
     private String log;
     private int line;

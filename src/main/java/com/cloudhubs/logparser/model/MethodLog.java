@@ -2,6 +2,10 @@ package com.cloudhubs.logparser.model;
 
 import java.util.List;
 
+
+/**
+ * @author Md Rofiqul Islam
+ */
 public class MethodLog {
     private String methodName;
     private List<String> logList;

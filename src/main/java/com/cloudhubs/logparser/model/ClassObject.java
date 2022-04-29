@@ -1,5 +1,10 @@
 package com.cloudhubs.logparser.model;
 
+
+/**
+ * @author Md Rofiqul Islam
+ * Model for hold class data
+ */
 public class ClassObject {
     private String objectName;
     private String className;

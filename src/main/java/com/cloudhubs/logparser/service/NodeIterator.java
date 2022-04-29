@@ -3,6 +3,9 @@ package com.cloudhubs.logparser.service;
 import com.github.javaparser.ast.Node;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Md Rofiqul Islam
+ */
 public class NodeIterator {
     public interface NodeHandler {
         boolean handle(Node node);

@@ -4,6 +4,10 @@ import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 
+
+/**
+ * @author Md Rofiqul Islam
+ */
 @Entity
 @NamedQueries({
         @NamedQuery(name = "LogModelDAO.findByCaseId", query = "SELECT t FROM LogModelDAO t where  t.caseId =: caseId")

@@ -3,6 +3,10 @@ package com.cloudhubs.logparser.model;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author Md Rofiqul Islam
+ * Model for hold for or while loop data
+ */
 public class ForStmtModel {
     List<Log> logList= new LinkedList<>();
     private int startLine;

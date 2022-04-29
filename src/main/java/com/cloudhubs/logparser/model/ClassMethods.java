@@ -2,6 +2,13 @@ package com.cloudhubs.logparser.model;
 
 import java.util.List;
 
+/**
+ * @author Md Rofiqul Islam
+ */
+
+/**
+ * Model for hold method data
+ */
 public class ClassMethods {
     private String classPath;
     private List<MethodLog> methodList;

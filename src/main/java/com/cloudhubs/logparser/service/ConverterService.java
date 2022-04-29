@@ -18,6 +18,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+/**
+ * @author Md Rofiqul Islam
+ */
 @Service
 public class ConverterService {
     @Autowired
@@ -28,6 +31,11 @@ public class ConverterService {
 
     private Set<String> caseIdSet = new HashSet<>();
 
+    /**
+     * Converts csv to xes file
+     * @param filePath
+     * @return
+     */
     public String csvToXes(String filePath) {
         Reader reader = null;
         try {
@@ -54,10 +62,17 @@ public class ConverterService {
         return null;
     }
 
+    /**
+     * Method for collect all log models
+     * @return
+     */
     public List<LogModelDAO> getALL() {
         return testRepository.findAll();
     }
 
+    /**
+     * Method for create XES file
+     */
     public void createXes() {
         FileWriter myWriter = null;
         try {
@@ -102,6 +117,9 @@ public class ConverterService {
 
     }
 
+    /**
+     * Method for create DOT file with business prcess mining data
+     */
     public  void createDot(){
         FileWriter myWriter = null;
         try {

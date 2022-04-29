@@ -2,345 +2,117 @@ strict digraph G {
  node [shape=box];
 rankdir=LR;
 size="50,50"; ratio=fill;
-Start -> Service_called_for_exam_end_date_reminder -> Creating_email -> sending_email -> end;
-Start -> HTTP_Request_come_for_update_choice -> end;
-Start -> Perform_database_query_to_find_exam_by_id -> Updating_the_data_of_found_exam -> Setting_exam_status_as_done -> Updating_the_exam_as_correct -> Performing_persist_operation_on_updated_exam -> end;
-Start -> HTTP_request_come_for_submitting_exam -> service_called_for_submit_exam -> end;
-Start -> HTTP_requst_come_for_find_all_exams -> end;
-Start -> Performing_database_query_to_find_exam_by_id -> returning_the_result -> end;
-Start -> Service_called_for_sending_email -> Configuration_set_up_for_sending_eamil -> Sending_email -> end;
-Start -> Performing_database_query_to_find_all_exam -> end;
-Start -> QmsService_called_for_getting_questions_with_configuration_id -> Returning_the_result -> end;
-Start -> HTTP_request_come_for_find_exams_based_on_status -> end;
-Start -> HTTP_request_come_for_delete_an_exam -> Service_called_for_delete_exam -> end;
-Start -> Perform_database_query_to_find_exam_by_id -> Checking_exam_validity -> Updating_exam_status -> Returning_the_result -> end;
-Start -> HTTP_request_come_for_finish_exam -> service_called_for_finish_exam -> end;
-Start -> Service_called_for_find_all_exam_based_on_exam_status -> filtered_the_exams_based_on_their_stutus -> returning_the_result -> end;
-Start -> Service_called_for_ger_configration_name -> returning_configuration_name -> end;
-Start -> Service_perform_database_query_to_find_all_exams -> returning_the_result -> end;
-Start -> Perform_database_query_to_find_exam_by_id -> Update_exam_data -> Persist_updated_exam -> end;
-Start -> HTTP_request_come_for_get_exam_by_id -> service_called_for_get_exam -> end;
-Start -> Perform_database_query_to_find_exam_by_id -> Create_new_review -> end;
-Start -> Serevice_called_for_sending_exam_start_date_reminder -> Creating_email -> sending_email -> end;
-Start -> HTTP_request_come_for_taking_an_exam -> Service_called_for_take_exam -> end;
-Start -> Task_for_sending_exam_reminders -> Finding_data_about_the_exam_of_today -> Calling_eamil_service_to_send_email_about_todays_exam -> Finding_data_about_the_exam_of_tomorrow -> Calling_eamil_service_to_send_the_email_about_tomomorrows_exam -> end;
-Start -> Service_called_for_sending_exam_assignment_notification -> Email_created -> Sending_email -> end;
-Start -> HTTP_request_come_for_create_new_exam -> Exam_service_called_for_create_new_exam -> Email_service_called_for_sending_exam_notification -> end;
-Start -> Perform_database_query_to_delete_exam -> returning_the_result -> end;
-Start -> Service_called_for_select_choices_wtih_with_choice_data -> Service_perform_database_query_for_finding_choices_with_question_id_of_choice -> Sevice_set_chosen_flag_on_found_choices -> Service_perform_database_persist_operation_with_chosen_choices -> Service_perform_database_query_for_finding_choices_with_exam_id_of_choice -> Setting_text_answer_to_the_chosen_questions -> Perform_database_persist_operation_with_updated_questions -> Exam_marked_as_a_valid_exam -> Returning_the_result -> end;
-Start -> HTTP_request_come_for_review_exam -> service_called_for_review_exam -> Sending_HTTP_response -> end;
-Start -> Creating_new_exam -> retunring_persisted_exam -> end;
-Start -> Service_Setting_the_exam_date -> Returning_updated_exam -> end;
-Start -> Service_called_for_saving_all_questions -> Performing_database_query_to_find_all_questions_with_exam_id -> Updating_question_choices -> Returning_question_set -> end;
-Start -> Service_called_for_exam_pruning -> Returning_the_prunning_result -> end;
-Start -> Checking_exam_existance -> returning_the_result -> end;
+Start -> [Add_New_Order] -> [Add_New_Order_Other] -> end;
+Start -> UPDATE_ORDER_INFO_:_ -> [Update_Order] -> [Add_New_Order_Other] -> end;
+Start -> /** -> end;
+Start -> [Delete_Order] -> [Delete_Order_Other] -> end;
+Start -> /** -> end;
+Start -> [Get_All_Orders] -> [Get_Orders_From_ts-order-service_successfully!] -> [Get_Orders_From_ts-order-service_fail!] -> [Get_Orders_From_ts-order-other-service_successfully!] -> [Get_Orders_From_ts-order-other-service_fail!] -> end;
+Start -> Get_all_order -> end;
 subgraph cluster_0 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Service_called_for_exam_end_date_reminder, Creating_email, sending_email;
- 		label="ems_service_EmailService_sendExamEndDateReminder";
+[Add_New_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_addOrder";
 }
 subgraph cluster_1 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Service_called_for_select_choices_wtih_with_choice_data, Service_perform_database_query_for_finding_choices_with_question_id_of_choice, Sevice_set_chosen_flag_on_found_choices, Service_perform_database_persist_operation_with_chosen_choices, Service_perform_database_query_for_finding_choices_with_exam_id_of_choice, Setting_text_answer_to_the_chosen_questions, Perform_database_persist_operation_with_updated_questions, Exam_marked_as_a_valid_exam, Returning_the_result;
- 		label="ems_service_ChoiceService_selectChoices";
+[Add_New_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_addOrder";
 }
 subgraph cluster_2 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-HTTP_Request_come_for_update_choice;
- 		label="ems_controller_ChoiceController_updateChoices";
+UPDATE_ORDER_INFO_:_, [Update_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_updateOrder";
 }
 subgraph cluster_3 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Updating_the_data_of_found_exam, Setting_exam_status_as_done, Updating_the_exam_as_correct, Performing_persist_operation_on_updated_exam;
- 		label="ems_service_ExamService_finishExam";
+UPDATE_ORDER_INFO_:_, [Update_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_updateOrder";
 }
 subgraph cluster_4 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Update_exam_data, Persist_updated_exam;
- 		label="ems_service_ExamService_submitExam";
+[Add_New_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_addOrder";
 }
 subgraph cluster_5 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-HTTP_request_come_for_submitting_exam, service_called_for_submit_exam;
- 		label="ems_controller_ExamController_submitExam";
+UPDATE_ORDER_INFO_:_, [Update_Order], [Add_New_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_updateOrder";
 }
 subgraph cluster_6 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Service_perform_database_query_to_find_all_exams, returning_the_result;
- 		label="ems_service_ExamService_findAllExams";
+/**;
+ 		label="src_main_adminorder_config_SecurityConfig_corsConfigurer";
 }
 subgraph cluster_7 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-HTTP_requst_come_for_find_all_exams;
- 		label="ems_controller_ExamController_listAllExams";
+[Delete_Order], [Delete_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_deleteOrder";
 }
 subgraph cluster_8 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Performing_database_query_to_find_exam_by_id, returning_the_result;
- 		label="ems_service_ExamService_findById";
+[Delete_Order], [Delete_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_deleteOrder";
 }
 subgraph cluster_9 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Service_called_for_sending_email, Configuration_set_up_for_sending_eamil, Sending_email;
- 		label="ems_service_EmailService_sendEmail";
+[Delete_Order], [Delete_Order_Other];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_deleteOrder";
 }
 subgraph cluster_10 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Performing_database_query_to_find_all_exam;
- 		label="ems_service_QuestionService_getAllByExam";
+/**;
+ 		label="src_main_adminorder_config_SecurityConfig_addCorsMappings";
 }
 subgraph cluster_11 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-QmsService_called_for_getting_questions_with_configuration_id, Returning_the_result;
- 		label="ems_service_QmsService_getQuestions";
+[Get_All_Orders], [Get_Orders_From_ts-order-service_successfully!], [Get_Orders_From_ts-order-service_fail!], [Get_Orders_From_ts-order-other-service_successfully!], [Get_Orders_From_ts-order-other-service_fail!];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_getAllOrders";
 }
 subgraph cluster_12 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Service_called_for_find_all_exam_based_on_exam_status, filtered_the_exams_based_on_their_stutus, returning_the_result;
- 		label="ems_service_ExamService_findAllExamsByStatus";
+[Get_All_Orders], [Get_Orders_From_ts-order-service_successfully!], [Get_Orders_From_ts-order-service_fail!], [Get_Orders_From_ts-order-other-service_successfully!], [Get_Orders_From_ts-order-other-service_fail!];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_getAllOrders";
 }
 subgraph cluster_13 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-HTTP_request_come_for_find_exams_based_on_status;
- 		label="ems_controller_ExamController_getExamsByStatus";
+[Get_All_Orders], [Get_Orders_From_ts-order-service_successfully!], [Get_Orders_From_ts-order-service_fail!], [Get_Orders_From_ts-order-other-service_successfully!], [Get_Orders_From_ts-order-other-service_fail!];
+ 		label="src_main_adminorder_service_AdminOrderServiceImpl_getAllOrders";
 }
 subgraph cluster_14 {
 	 style=filled;
 		color=lightgrey;
 		node [style=filled,color=white];
-Perform_database_query_to_delete_exam, returning_the_result;
- 		label="ems_service_ExamService_deleteExam";
-}
-subgraph cluster_15 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_delete_an_exam, Service_called_for_delete_exam;
- 		label="ems_controller_ExamController_deleteExam";
-}
-subgraph cluster_16 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Checking_exam_validity, Updating_exam_status, Returning_the_result;
- 		label="ems_service_ExamService_takeExam";
-}
-subgraph cluster_17 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Updating_the_data_of_found_exam, Setting_exam_status_as_done, Updating_the_exam_as_correct, Performing_persist_operation_on_updated_exam;
- 		label="ems_service_ExamService_finishExam";
-}
-subgraph cluster_18 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_finish_exam, service_called_for_finish_exam;
- 		label="ems_controller_ExamController_finishExam";
-}
-subgraph cluster_19 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_find_all_exam_based_on_exam_status, filtered_the_exams_based_on_their_stutus, returning_the_result;
- 		label="ems_service_ExamService_findAllExamsByStatus";
-}
-subgraph cluster_20 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_ger_configration_name, returning_configuration_name;
- 		label="ems_service_QmsService_getConfigName";
-}
-subgraph cluster_21 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_perform_database_query_to_find_all_exams, returning_the_result;
- 		label="ems_service_ExamService_findAllExams";
-}
-subgraph cluster_22 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Update_exam_data, Persist_updated_exam;
- 		label="ems_service_ExamService_submitExam";
-}
-subgraph cluster_23 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_get_exam_by_id, service_called_for_get_exam;
- 		label="ems_controller_ExamController_getExam";
-}
-subgraph cluster_24 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Create_new_review;
- 		label="ems_service_ExamService_reviewExam";
-}
-subgraph cluster_25 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Serevice_called_for_sending_exam_start_date_reminder, Creating_email, sending_email;
- 		label="ems_service_EmailService_sendExamStartDateReminder";
-}
-subgraph cluster_26 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Checking_exam_validity, Updating_exam_status, Returning_the_result;
- 		label="ems_service_ExamService_takeExam";
-}
-subgraph cluster_27 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_taking_an_exam, Service_called_for_take_exam;
- 		label="ems_controller_ExamController_takeExam";
-}
-subgraph cluster_28 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Serevice_called_for_sending_exam_start_date_reminder, Creating_email, sending_email;
- 		label="ems_service_EmailService_sendExamStartDateReminder";
-}
-subgraph cluster_29 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_exam_end_date_reminder, Creating_email, sending_email;
- 		label="ems_service_EmailService_sendExamEndDateReminder";
-}
-subgraph cluster_30 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Task_for_sending_exam_reminders, Finding_data_about_the_exam_of_today, Calling_eamil_service_to_send_email_about_todays_exam, Finding_data_about_the_exam_of_tomorrow, Calling_eamil_service_to_send_the_email_about_tomomorrows_exam;
- 		label="ems_component_TaskScheduling_sendExamReminders";
-}
-subgraph cluster_31 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_sending_exam_assignment_notification, Email_created, Sending_email;
- 		label="ems_service_EmailService_sendExamAssignmentNotification";
-}
-subgraph cluster_32 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Creating_new_exam, retunring_persisted_exam;
- 		label="ems_service_ExamService_saveExam";
-}
-subgraph cluster_33 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_sending_exam_assignment_notification, Email_created, Sending_email;
- 		label="ems_service_EmailService_sendExamAssignmentNotification";
-}
-subgraph cluster_34 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_create_new_exam, Exam_service_called_for_create_new_exam, Email_service_called_for_sending_exam_notification;
- 		label="ems_controller_ExamController_createExam";
-}
-subgraph cluster_35 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_delete_exam, returning_the_result;
- 		label="ems_service_ExamService_deleteExam";
-}
-subgraph cluster_36 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_select_choices_wtih_with_choice_data, Service_perform_database_query_for_finding_choices_with_question_id_of_choice, Sevice_set_chosen_flag_on_found_choices, Service_perform_database_persist_operation_with_chosen_choices, Service_perform_database_query_for_finding_choices_with_exam_id_of_choice, Setting_text_answer_to_the_chosen_questions, Perform_database_persist_operation_with_updated_questions, Exam_marked_as_a_valid_exam, Returning_the_result;
- 		label="ems_service_ChoiceService_selectChoices";
-}
-subgraph cluster_37 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Perform_database_query_to_find_exam_by_id, Create_new_review;
- 		label="ems_service_ExamService_reviewExam";
-}
-subgraph cluster_38 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-HTTP_request_come_for_review_exam, service_called_for_review_exam, Sending_HTTP_response;
- 		label="ems_controller_ExamController_reviewExam";
-}
-subgraph cluster_39 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Creating_new_exam, retunring_persisted_exam;
- 		label="ems_service_ExamService_saveExam";
-}
-subgraph cluster_40 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_Setting_the_exam_date, Returning_updated_exam;
- 		label="ems_service_ExamService_setExamDate";
-}
-subgraph cluster_41 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_saving_all_questions, Performing_database_query_to_find_all_questions_with_exam_id, Updating_question_choices, Returning_question_set;
- 		label="ems_service_QuestionService_saveAllQuestionQmsDtos";
-}
-subgraph cluster_42 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Service_called_for_exam_pruning, Returning_the_prunning_result;
- 		label="ems_service_QuestionService_getAllByExamPruned";
-}
-subgraph cluster_43 {
-	 style=filled;
-		color=lightgrey;
-		node [style=filled,color=white];
-Checking_exam_existance, returning_the_result;
- 		label="ems_service_ExamService_isExamExist";
+Get_all_order;
+ 		label="src_main_adminorder_controller_AdminOrderController_getAllOrders";
 }
 Start [shape=Mdiamond];
 	end [shape=Msquare];
